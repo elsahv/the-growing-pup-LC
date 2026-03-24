@@ -1,67 +1,113 @@
 ---
-import Hero from "../components/sections/Hero.astro";
-import Contact from "../components/sections/Contact.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-// import Card from "../components/shared/Card.astro";
-import Portfolio from "../components/sections/Portfolio.astro";
-// import CenterPageBanner from "../components/shared/CenterPageBanner.astro";
-import About from "../components/sections/About.astro";
-// import SiteCard from "../components/SiteCard.astro";
-// const allFeaturedSites = await Astro.glob("./websites/*.md");
+import Hero from "../components/sections/Hero.astro";
+import BuildAuthority from "../components/sections/BuildAuthority.astro";
+import AddressKeyProblem from "../components/sections/AddressKeyProblem.astro";
+import HowItWorks from "../components/sections/HowItWorks.astro";
+import WhatsIncluded from "../components/sections/WhatsIncluded.astro";
+import PkgCard from "../components/shared/PkgCard.astro";
+const websitePackages = await Astro.glob("./websitePackages/*.md");
+import AboutContent from "../components/shared/AboutContent.astro";
+import CenterPageBanner from "../components/shared/CenterPageBanner.astro";
+import SiteCard from "../components/shared/SiteCard.astro";
+const allFeaturedSites = await Astro.glob("./posts/*.md");
 ---
 
 <MainLayout>
   <Hero />
-  <About />
-  <Portfolio />
+  <BuildAuthority />
+  <!-- TODO: CONTENT- what problem LC solves, ETC -->
+  <AddressKeyProblem />
 
-  <!-- NOTES SECTION v-->
-  <!-- <div
-      id="notes"
-      class="flex justify-center bg-teal md:mt-[150px] pb-5 pl-2 text-"
-    >
-      <div id="blog-container" class="">
-        <CenterPageBanner BannerTitle="Notes!" />
-        <div
-          id="grid"
-          class="bg- pb-5 my-5 pt-5 pl-[45px] pr-[55px] grid md:grid-cols-2 grid-cols-1 gap-12"
-        >
-          {
-            allSites.map((site) => (
-              <Card
-                title={site.frontmatter.title}
-                image={site.frontmatter.image?.url}
-                alt={site.frontmatter.title}
-                pubDate={site.frontmatter.pubDate}
-                testItem1={site.frontmatter.testItem1}
-                category1={site.frontmatter.category1}
-                category2={site.frontmatter.category2}
-                url={site.url}
-              />
-            ))
-          }
-        </div>
+  <!-- TODO: CONTENT-  4 sq grid v-->
+
+  <HowItWorks />
+  <section id="whats-included" class="2xl:mx-[90px] p-5">
+    <WhatsIncluded />
+    <section id="creative-templates">
+      <CenterPageBanner BannerTitle="web development" />
+      <div
+        id="creative-templates-pkgs-grid"
+        class="bg- lg:px-5 grid sm:grid-cols-2 gap-5 mt-5 bg-"
+      >
+        <!-- TODO: add pricing to packages (web design templates) v  -->
+        {
+          websitePackages.map((caseStudy) => (
+            <PkgCard
+              no={caseStudy.frontmatter.no}
+              title={caseStudy.frontmatter.title}
+              image={caseStudy.frontmatter.image.url}
+              alt={caseStudy.frontmatter.image.alt}
+              url={caseStudy.url}
+              testItem1={caseStudy.frontmatter.testItem1}
+              language={caseStudy.frontmatter.language}
+              backend={caseStudy.frontmatter.backend}
+            />
+          ))
+        }
       </div>
-    </div> -->
+    </section>
+    <!-- 2ND TESTIMONIAL VVV -->
+    <AboutContent
+      title="Running Quail- testimonial goes here!"
+      paragraph1="onboarding- elaborate Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis quo et doloremque excepturi molestias iste optio, sed voluptate culpa recusandae quos temporibus velit accusamus natus porro rem ipsa perferendis laudantium."
+      paragraph2="discovery- elaborate/"
+      paragraph3="development-- elaborateLorem, ipsum dolor sit amet consectetur adipisicing elit. Quis quo et doloremque excepturi molestias iste optio, sed voluptate culpa recusandae quos temporibus velit accusamus natus porro rem ipsa perferendis laudantium."
+      paragraph4="launch- elaborate"
+      img="https://images.pexels.com/photos/3585001/pexels-photo-3585001.jpeg?_gl=1*sm8kor*_ga*MTA5MDE3MzI2MS4xNzU4MjUwMDM4*_ga_8JE65Q40S6*czE3NzQxMzczNTMkbzQyJGcxJHQxNzc0MTM3MzY4JGo0NSRsMCRoMA.."
+    />
+    <!-- </section> -->
 
-  <!-- * PROJECTS SECTION v
+    <!-- LAST SECTION TO CONVINCE CTA V-->
+    <!-- LAST SECTION TO CONVINCE CTA ^-->
 
-  <section id="projects" class="px-5 mt-5">
-    <div class="flex 2xl:flex-row flex-col p-5">
-      {
-        allFeaturedSites.map((work) => (
-          <SiteCard
-            title={work.frontmatter.title}
-            image={work.frontmatter.image.url}
-            alt={work.frontmatter.image.alt}
-            url={work.url}
-            testItem1={work.frontmatter.testItem1}
-            websiteNumber={work.frontmatter.websiteNumber}
-          />
-        ))
-      }
+    <!-- TODO: WRITING SECTION VVV -->
+    <section id="writing" class="border-b border- lg:px-5 mt-5">
+      <CenterPageBanner BannerTitle="Creative Projects" />
+      <div
+        id="grid"
+        class="grid 2xl:grid-cols-3 md:grid-cols-2 grid-cols-1 md:p-5"
+      >
+        {
+          allFeaturedSites.map((work) => (
+            <SiteCard
+              title={work.frontmatter.title}
+              image={work.frontmatter.image.url}
+              alt={work.frontmatter.image.alt}
+              url={work.url}
+              testItem1={work.frontmatter.testItem1}
+              websiteNumber={work.frontmatter.websiteNumber}
+            />
+          ))
+        }
+      </div>
+    </section>
+    <!-- TODO: WRITING (future creative projects) SECTION ^^^ -->
+    <div id="web-dev-intro2" class="bg-">
+      <div id="">
+        <AboutContent
+          title="About Me blurb"
+          paragraph1="You can reach me by emailing:"
+          paragraph2="elsahvy@gmail.com"
+          paragraph3="I am always looking for opportunities to further my skills... and to work with other like-minded people in tech. Email is the best way to get in touch, you can also find me at"
+          paragraph4="instagram and linkedIn"
+          img="https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg"
+        />
+      </div>
     </div>
-  </section> -->
-
-  <Contact />
+    <!--  -->
+    <div id="contact">
+      <CenterPageBanner BannerTitle="Contact" />
+      <div id="web-dev-intro1">
+        <AboutContent
+          title="Web Development-ADDRESS KEY PROBLEM"
+          paragraph1="Pain Points to Address- You’re struggling to get [desirable result] because you don't have [missing piece]"
+          paragraph2="You have [example], but you aren't [achieving this result]"
+          paragraph3="How does this make them feel?"
+          paragraph4="Have you been in the same situation? How to overcome this? How can you help them do the same? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima deserunt accusantindae quo adipisci dignissimos! Pariatur, suscipit exercitationem."
+          img="https://images.pexels.com/photos/3585001/pexels-photo-3585001.jpeg?_gl=1*sm8kor*_ga*MTA5MDE3MzI2MS4xNzU4MjUwMDM4*_ga_8JE65Q40S6*czE3NzQxMzczNTMkbzQyJGcxJHQxNzc0MTM3MzY4JGo0NSRsMCRoMA.."
+        />
+      </div>
+    </div>
+  </section>
 </MainLayout>

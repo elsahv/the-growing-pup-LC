@@ -12,24 +12,19 @@ const {
 } = frontmatter;
 ---
 
-<div id="sq" class="opacity-70 hover:opacity-100 px-5 mt-5 pt-3">
+<div id="sq" class="bg- opacity-70 hover:opacity-100 px-5 mt-5 pt-3">
   <a href={url}>
-    <div class="pb-1 flex text-3xl">
-      <div>{websiteNumber}.</div>
-      <h2 class="ml-3">{title}</h2>
-    </div>
-    <img
+    <!-- <div>{websiteNumber}.</div> -->
+    <h2 class="ml-3 text-3xl">{title}</h2>
+    <!-- <img
       src={image}
       class="drop-shadow-xl rounded border border-munsell"
       alt={alt}
-    />
+    /> -->
 
-    <div
-      id="post-excerpt"
-      class="bg- text-onyx bg-papaya mb-5 pb-3 drop-shadow-md"
-    >
-      <div class="mt-2 flex">
-        <p class="pl-5 pr-1 opacity-80 text-lg">{testItem1}</p>
+    <div id="post-excerpt" class="bg- text-onyx bg- mb-5 pb-3 drop-shadow-md">
+      <div class="pl-3 ml-1">
+        <p class="opacity-80 text-lg">{testItem1}</p>
         <button class="text-munsell underline opacity-70 hover:opacity-100"
           >read more...</button
         >

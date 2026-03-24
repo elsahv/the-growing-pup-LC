@@ -1,10 +1,11 @@
 ---
 id: 3
 layout: ../../layouts/PostLayout.astro
-title: "post 3"
+title: "The Indoor Jungle Project"
+# wtbh will likely go towards eh
 websiteNumber: "03"
 pubDate: 1/7/26
-testItem1: "A developer/ story brand writing portfolio."
+testItem1: "A developer/ story brand writing portfolio. Share the backstory of how the website came into existence. This could include the inspiration behind its creation, the individuals or team involved, and any challenges or obstacles they faced in bringing it to life."
 category1: "category1"
 category2: "category2"
 author: "Astro Learner"

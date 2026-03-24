@@ -1,0 +1,134 @@
+---
+const websites = [
+  {
+    number: "01.",
+    title: "The Growing Pup → beginner stage",
+    p: "This is the The Growing Pup kit. Brochure hands off site w/ monthly updates.",
+    link: "/websitePackages/1.the-growing-pup",
+  },
+  {
+    number: "02.",
+    title: "The Rising Carnivore → established and growing",
+    p: "For small businesses with a desire to reach new customers online and grow their business ...web designing for artists and creative. A web design subscription service for small business owners and creatives- focuses on landing pages and user stories. ",
+    link: "/websitePackages/2.the-rising-carnivore",
+  },
+  {
+    number: "03.",
+    title: "The Alpha → leader / dominant business",
+    p: "illustrative mindmaps (with photos) about cooking for neurodivergents, incorporate nutrition",
+    link: "/websitePackages/3.the-alpha",
+  },
+];
+
+// BACKEND AND FRONTEND TECH / language, toolbox....
+
+//CB CONTENT: WHY- it is important to maintain your sites, and how I can take that off your hands. HOW- I use only tech that is needed, no BS or filler.
+
+//CB CONTENT:  WHY- do I code with javascript or php?? HOW- react, vite, astro is used to create beautiful things While social media is great, you do not fully own your own content. When owning a website, you have total control."
+
+// const screenshots = [
+//   {
+//     number: "✓05.",
+//     title: "Brand concept, targetBrand",
+//     p: "Each site is designed to reduce cognitive overload, maintain focus, and make navigation intuitive for users with attention differences.",
+//     link: "/techApplications/05",
+//   },
+//   {
+//     number: "✓06.",
+//     title: "Roof",
+//     p: "reasons why I use astro ",
+//     link: "/techApplications/06",
+//   },
+//   {
+//     number: "✓07.",
+//     title: "The Running Quail",
+//     p: "full stack community project",
+//     link: "/techApplications/07",
+//   },
+//   {
+//     number: "✓  08.",
+//     title: "Jungle",
+//     p: "SEO thru wp and others",
+//     link: "/techApplications/08",
+//   },
+//   {
+//     number: "✓09.",
+//     title: "wtbh.",
+//     p: "reasons I use wordpress and its extenstions",
+//     link: "/techApplications/09",
+//   },
+//   {
+//     number: "✓10.",
+//     title: "Morongo Basin weirdness",
+//     p: "Morongo Basin weirdness",
+//     link: "/techApplications/10",
+//   },
+//   {
+//     number: "✓11.",
+//     title: "Desert Life",
+//     p: "SANITY IMP",
+//     link: "/techApplications/11",
+//   },
+//   {
+//     number: "✓12.",
+//     title: "Palm Springs Modernism Styles ",
+//     p: "php- custom themes",
+//     link: "/techApplications/12",
+//   },
+// ];
+---
+
+<div id="list-container" class="bg- 2xl:p-5 2xl:m-[35px]">
+  <h2 class="font-semibold 2xl:text-4xl text-3xl pb-2">Case Studies</h2>
+  <!-- <ul>
+    <li>The Growing Pup → beginner stage</li>
+    <li>The Rising Carnivore → established and growing</li>
+    <li>The Alpha → leader / dominant business</li>
+  </ul> -->
+  <div id="list-wrapper" class="bg- ml-1 mt-2 pt-2 pl-1 mb-10">
+    <div id="list-container" class="pl-1">
+      <div id="websites-grid" class="bg- grid lg:grid-cols-2 grid-cols-1 gap-5">
+        {
+          websites.map((item) => (
+            <div id="sq" class="opacity-60 hover:opacity-100 duration-500">
+              <a href={item.link}>
+                <span class="text-sm">{item.number}</span>
+                <h2 class="text-lg font-">{item.title}</h2>
+                <p class="text-sm ">{item.p}</p>
+              </a>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div
+  id="list-container"
+  class="bg- 2xl:px-5 pt-4 2xl:p- 2xl:mt-[150px] 2xl:mx-5"
+>
+  <h2 class="font-semibold 2xl:text-4xl text-3xl pb-2">
+    Tech Applications-about select templates
+  </h2>
+  <div id="list-wrapper" class="bg- ml-1 pl-1 mb-10">
+    <div id="list-container" class="">
+      <div
+        id="screenshots-grid"
+        class="bg- p-1 grid 2xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-5 bg-"
+      >
+        {
+          screenshots.map((item) => (
+            <div id="sq" class="opacity-60 hover:opacity-100  duration-500">
+              <a href={item.link}>
+                <span class="text-sm">{item.number}</span>
+                <h2 class="text-xl font-">{item.title}</h2>
+                <p class="text-sm ">{item.p}</p>
+              </a>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div> -->

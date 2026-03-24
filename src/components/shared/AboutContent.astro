@@ -1,0 +1,62 @@
+---
+import ButtonProps from "../shared/ButtonProps.astro";
+import Image from "astro/components/Image.astro";
+import SelfImg from "../../images/self.jpg";
+// import DynamicAboutCTA from "./shared/DynamicAboutCta";
+
+export interface Props {
+  title: string;
+  paragraph1: string;
+  paragraph2: string;
+  paragraph3: string;
+  paragraph4: string;
+  img: string;
+}
+
+const { title, paragraph1, paragraph2, paragraph3, paragraph4, img } =
+  Astro.props as Props;
+---
+
+<div class="flex justify-center bg-">
+  <div id="" class="max-w-[1000px] py-5 my-5">
+    <div id="PROBLEM-SOLVING-wrapper" class="py-5">
+      <div id="container" class="bg-">
+        <div id="flex-TEST" class="flex lg:flex-row flex-col">
+          <div id="sq1" class="mt-5">
+            <div id="sq1-container" class="mt-5">
+              <img
+                id="self-img"
+                src={img}
+                alt=""
+                class="lg:p-5 p-2 my-2 sq-styles"
+              />
+              <!-- <DynamicAboutCTA isLoggedIn={true} username="Address Key Problem" /> -->
+              <!-- <DynamicAboutCTA isLoggedIn={false} username="test" /> -->
+            </div>
+          </div>
+          <div id="sq2" class="pl-5 pt-5 mt-5">
+            <div class="md:pl-1 pl-3 md:pr-3 pr-1 pt-5">
+              <div id="paragraph-container" class="flex flex-col space-y-4">
+                <h2 class="font- text-4xl">{title}</h2>
+                <p>
+                  {paragraph1}<p>
+                    <p>
+                      {paragraph2}
+                    </p>
+                    <p class="">
+                      {paragraph3}
+                    </p>
+                    <p>
+                      {paragraph4}
+                    </p>
+                  </p>
+                  <ButtonProps btn1="CTA" btn1Link="/" />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

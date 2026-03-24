@@ -1,9 +1,10 @@
 html {
- 
+  background: #f0ead2;
   font-family: sans-serif;
   scroll-behavior: smooth;
-  color: #313638;
+  color: #15616D;
   opacity: 95%;
+  font-optical-sizing: auto;
 }
 
 * {   
@@ -283,3 +284,36 @@ section {
   background: #B18D9B;
 } 
 
+#web-dev-intro2  #flex-TEST {
+  flex-direction: row-reverse;
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
+}
+
+
+
+#header #nav-items {
+  padding: 0 45px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  
+  
+  
+  @media (max-width: 1024px) {
+    background: pink;
+   flex-direction: column;
+   padding: 0;
+     /* align-items: flex-start; */
+  }
+}
+
+
+#footer #nav-items {
+  /* background: lightgreen; */
+  display: flex;
+ 
+}

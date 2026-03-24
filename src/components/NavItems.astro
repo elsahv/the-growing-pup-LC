@@ -1,33 +1,36 @@
 ---
 const items = [
   {
-    icon: "https://dl.dropboxusercontent.com/scl/fi/sazqvcewj4102t3pryhgs/github.png?rlkey=393g3j44d83mk55k2kya5ct0e&st=1a1ftfsv&dl=0",
-    link: "https://github.com/elsahv?tab=repositories",
+    icon: "start here",
+    link: "/#web-development ",
   },
   {
-    icon: "https://dl.dropboxusercontent.com/scl/fi/ecqo4nns2dlsxe1hvfiz7/linkedIn.png?rlkey=x95p8d0plnukih5fvelej4fv7&st=5cm9z36w&dl=0",
-    link: "https://www.linkedin.com/in/elsa-hovey",
+    icon: "web development",
+    link: "/#creative-templates",
+  },
+  {
+    icon: "creative projects",
+    link: "/#writing",
   },
 
-  // {
-  //   icon: "notes",
-  //   link: "/#notes ",
-  // },
   {
-    icon: "https://dl.dropboxusercontent.com/scl/fi/azjiy3b7xp4q8u13o7yyg/instagram.png?rlkey=cxial2ze2jk0q9qjw942sibuc&st=pwo8jfmp&dl=0",
-    link: "https://www.instagram.com/elsahoveydevdesign/ ",
+    icon: "contact",
+    link: "/#contact ",
   },
 ];
 ---
 
-<div class="opacity-90 bg- pb-5">
-  <div class="flex items-center space-x-3 pl-4 opacity-70 bg-">
-    {
-      items.map((item) => (
-        <a href={item.link} target="_blank" rel="noopener noreferrer">
-          <img src={item.icon} alt="" class="bg-test w-[35px] h-[35px]" />
-        </a>
-      ))
-    }
-  </div>
-</div>
+<ul
+  id="nav-items"
+  class="text-carribean opacity-80 md:pr-5 md:mr-5 lg:pb-5 pr-2 h-full"
+>
+  {
+    items.map((item) => (
+      <a href={item.link}>
+        <li class="md:text-xl font-semibold px-2 hover:text-[#a3b18a]">
+          {item.icon}
+        </li>
+      </a>
+    ))
+  }
+</ul>

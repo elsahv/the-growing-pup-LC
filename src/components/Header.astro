@@ -1,29 +1,24 @@
 ---
-import { Image } from "astro:assets";
-import ProfilePic from "../../public/eh-img.jpg";
 import NavItems from "./NavItems.astro";
 ---
 
 <header
-  class="bg- pt-5 pl-5 pr-5 pb-0 min-[769px]:fixed relative md:left-0 top-0 z-50 min-[769px]:h-screen
-  2xl:w-1/4
-  min-[1024px]:w-[350px]
-    min-[800px]:w-[290px]
-  min-[769px]:w-[320px]
-   max-[768px]:w-full
-    border-black md:border-r-2"
+  id="header"
+  class="grid grid-cols-2 space-x-5 pt-5 bg-parchment z-10 w-full border-b border-gray-400 pb-2"
 >
-  <div id="logo" class="2xl:text-9xl lg:text-8xl text-7xl pb-1 opacity-90">
-    <a href="/"> Elsa <br /> Hovey</a>
+  <div id="logo" class="text-4xl pb-1 mr-5 opacity-90">
+    <a href="/">
+      <img
+        src="https://dl.dropboxusercontent.com/scl/fi/xzfhk2jletg2hqwc9ecks/coyote.png?rlkey=xtfjf7plvgb8y3fjxdij0vdt5&st=run4yzui&dl=0"
+        alt=""
+        width="145px"
+        height="145px"
+        class="-scale-x-100"
+      />
+    </a>
   </div>
-  <div id="sm-icons-container" class="">
+
+  <div class="">
     <NavItems />
-  </div>
-  <div class="bg- min-[768px]:mt-[130px] mb-5">
-    <Image
-      src={ProfilePic}
-      alt=""
-      class="border border-black rounded w-3/4 pb-5"
-    />
   </div>
 </header>

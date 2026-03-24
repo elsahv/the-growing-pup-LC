@@ -1,0 +1,75 @@
+---
+import AboutContent from "../shared/AboutContent.astro";
+import CenterPageBanner from "../shared/CenterPageBanner.astro";
+
+const items = [
+  {
+    title: "ONBOARDING PHASE",
+    description:
+      "Client signs up → Chooses plan + fills out onboarding form, You select a base layout or start custom in Astro.",
+  },
+  {
+    title: "DISCOVERY (creative) PHASE",
+    description:
+      "This is where I take the layout and change the code to create a custom website that fits your business, personality, goals...     sitemap, wireframe site--> mockup first draft--> mockup revised, final draft",
+  },
+  {
+    title: "DEVELOPMENT PHASE ",
+    description:
+      "set up vercel temp--> convert mockups into code--> go over temp with client --> final revisions. ",
+  },
+  {
+    title: "LAUNCH PHASE",
+    description:
+      "final review and Q&A--> move local website to live server,hosting,client training--> final payment. set up vercel temp--> convert mockups into code--> go over temp with client --> final revisions",
+  },
+];
+---
+
+<div id="how-it-works" class="mt-[90px] p-5 bg-">
+  <div id="4-sq-grid" class="">
+    <div class="pt-3 pb-2">
+      <h2 class="pl-1 text-4xl font- border-b border-black">How it Works</h2>
+      <p class="font- pl-2 pt-5">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
+        praesentium aspernatur adipisci quam veritatis saepe eligendi eius
+        sapiente! Autem nostrum, optio ullam culpa voluptate consectetur odit
+        aperiam asperiores ad veniam.
+      </p>
+    </div>
+    <!-- TODO: GIVE STEP- BY-STEP GUIDE FROM START TO FINISH, keep in simple to give your client an easy map of how things work form first intereaction with you to end result-->
+    <div id="how-it-works-container" class="bg-">
+      <div
+        id="how-it-works-grid"
+        class="grid 2xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mt-5 pt-3"
+      >
+        {
+          items.map((item) => (
+            <div
+              id="sq-wrapper"
+              class="flex justify-center bg-teal text-parchment sq-styles-teal px-2"
+            >
+              <div id="sq-container" class="bg-carribean p-3 w-full bg-">
+                <div id="container">
+                  <p class="text-md  ">{item.description}</p>
+                </div>
+                <h3 class="text-2xl font-bold flex justify-end pt-5">
+                  {item.title}
+                </h3>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <AboutContent
+    title="HoveyRoofing testimonial goes here!"
+    paragraph1="onboarding- elaborate Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis quo et doloremque excepturi molestias iste optio, sed voluptate culpa recusandae quos temporibus velit accusamus natus porro rem ipsa perferendis laudantium."
+    paragraph2="discovery- elaborate/"
+    paragraph3="development-- elaborateLorem, ipsum dolor sit amet consectetur adipisicing elit. Quis quo et doloremque excepturi molestias iste optio, sed voluptate culpa recusandae quos temporibus velit accusamus natus porro rem ipsa perferendis laudantium."
+    paragraph4="launch- elaborate"
+    img="https://images.pexels.com/photos/3585001/pexels-photo-3585001.jpeg?_gl=1*sm8kor*_ga*MTA5MDE3MzI2MS4xNzU4MjUwMDM4*_ga_8JE65Q40S6*czE3NzQxMzczNTMkbzQyJGcxJHQxNzc0MTM3MzY4JGo0NSRsMCRoMA.."
+  />
+</div>

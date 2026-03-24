@@ -1,19 +1,41 @@
 ---
-import ContentSplitImg from "../shared/ContentSplitImg.astro";
+
 ---
 
-<!-- 1) HEADLINE (CLEAR VALUE) --><!-- 2) SUB HEADLINE (WHO ITS FOR AND HOW) --><!-- 3) PRIMARY CTA -->
-<section id="hero" class="bg-">
-  <ContentSplitImg
-    attentionParagraph="🖥️ Web Design & FullStack Development"
-    interestParagraph=" I develop interesting stories and beautiful, quick websites!"
-    desireParagraph="Need a website that works for your business? Something quick and easy to manage? Or hands off?"
-    actionParagraph="I've done all the over thinking with building sites... so you don't have to!  Save yourself from a tech headache and work with me!"
-    img=""
-    img2="https://dl.dropboxusercontent.com/scl/fi/e7c8npuns63srej6y2wju/ehLogo2.png?rlkey=lw92l2jhk1duxqw5y5spn99om&st=3gd86pi9&dl=0 "
-    btn1="find out more"
-    btn2="Work with me"
-    btn1Link="/#about"
-    btn2Link="/#contact"
-  />
+<section
+  id="hero-section"
+  class="text-carribean flex justify-center items-center"
+>
+  <div
+    id="hero-container"
+    class="test2 text-center max-w-[1000px] h-1/2 mb-[100px] 2xl:mt-[270px] mt-[180px]"
+  >
+    <div class="text-2xl">
+      <h1 id="hero-title" class="md:text-lg text-md opacity-80">
+        Laughing Coyote Dev <!-- what is it? -->
+      </h1>
+
+      <div id="content-container" class="2xl:mx-5 md:mx-[150px] mx-5">
+        <p
+          id="hero description"
+          class="font-bold 2xl:text-5xl md:text-3xl text-xl md:my-5 my-3"
+        >
+          A subscription website service for busy small-businesses owners...<!-- who is it for? -->
+        </p>
+        <div class="flex justify-center">
+          <p class="max-w-[500px] md:text-xl text-md text text-carribean">
+            with a desire to reach new customers online and grow your business.<!-- how will it make my life better? -->
+            <button class="underline hover:lavender hover:text-cerulean md:mt-1"
+              ><a class="" href="/#packages">
+                <span class="pr-2">
+                  <!-- what do you want me to do? -->see packages
+                </span>
+                💻
+              </a></button
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

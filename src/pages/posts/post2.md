@@ -1,10 +1,10 @@
 ---
 id: 1
 layout: ../../layouts/PostLayout.astro
-title: "Post 2"
+title: "Hovey Roofing"
 websiteNumber: "02"
 pubDate: 1/3/26
-testItem1: "A developer/ story brand writing portfolio."
+testItem1: "A developer/ story brand writing portfolio. Share the backstory of how the website came into existence. This could include the inspiration behind its creation, the individuals or team involved, and any challenges or obstacles they faced in bringing it to life."
 category1: "category1"
 category2: "category2"
 author: "Astro Learner"

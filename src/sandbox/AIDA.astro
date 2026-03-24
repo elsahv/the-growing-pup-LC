@@ -1,0 +1,46 @@
+---
+export interface Props {
+  attentionHeading: string;
+  interestParagraph: string;
+  desireParagraph: string;
+  CTAButton: string;
+  websiteUrl?: string;
+  CTAbtnLink: string;
+}
+
+const {
+  attentionHeading,
+  interestParagraph,
+  desireParagraph,
+  CTAButton,
+  CTAbtnLink,
+} = Astro.props as Props;
+---
+
+<div class="mt-[50px]">
+  <div id="new-AIDA" class="text-onyx 2xl:mt-3 flex justify-center">
+    <div id="container" class="p-5 w-1/2 text- my-5">
+      <div class="">
+        <h1 id="attentionHeading" class="opacity-80 text-5xl md:my-5 my-3">
+          {attentionHeading}
+        </h1>
+        <div class="opacity-70">
+          <p id="" class="bg-">
+            {interestParagraph}
+          </p>
+          <p class="py-4">
+            {desireParagraph}
+          </p>
+        </div>
+        <button
+          id="CTA-btn"
+          class="mt-5 bg-munsell text-white opacity-85 hover:opacity-100 sq-styles"
+        >
+          <a href={CTAbtnLink}>
+            {CTAButton}
+          </a>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
