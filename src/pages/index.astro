@@ -16,17 +16,29 @@ const allWorkProjects = await Astro.glob("./workProjects/*.md");
 <MainLayout>
   <Hero />
   <BuildAuthority />
-  <AddressKeyProblem />
-  <HowItWorks />
-  <section id="whats-included" class="2xl:mx-[90px] p-5">
+  <!-- *START HERE VV -->
+  <div id="start-here-ANCHOR">
+    <AddressKeyProblem />
+    <HowItWorks />
+    <AboutContent
+      title="HoveyRoofing testimonial goes here!"
+      paragraph1="this expands on the 'how it works section'----onboarding- elaborate Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis quo et doloremque excepturi molestias iste optio, sed voluptate culpa recusandae quos temporibus velit accusamus natus porro rem ipsa perferendis laudantium."
+      paragraph2="discovery- elaborate/"
+      paragraph3="development-- elaborateLorem, ipsum dolor sit amet consectetur adipisicing elit. Quis quo et doloremque excepturi molestias iste optio, sed voluptate culpa recusandae quos temporibus velit accusamus natus porro rem ipsa perferendis laudantium."
+      paragraph4="launch- elaborate"
+      img="https://images.pexels.com/photos/3585001/pexels-photo-3585001.jpeg?_gl=1*sm8kor*_ga*MTA5MDE3MzI2MS4xNzU4MjUwMDM4*_ga_8JE65Q40S6*czE3NzQxMzczNTMkbzQyJGcxJHQxNzc0MTM3MzY4JGo0NSRsMCRoMA.."
+    />
     <WhatsIncluded />
-    <section id="creative-templates">
+  </div>
+
+  <!--* WEB DEV ANCHOR-->
+  <div id="web-development-ANCHOR">
+    <section id="web-dev-template-pkgs" class="bg-">
       <CenterPageBanner BannerTitle="web development" />
       <div
-        id="creative-templates-pkgs-grid"
+        id="template-pkgs-grid"
         class="bg- lg:px-5 grid sm:grid-cols-3 gap-5 mt-5 pt-5 bg-"
       >
-        <!-- TODO: add pricing to packages (web design templates) v  -->
         {
           websitePackages.map((caseStudy) => (
             <PkgCard
@@ -44,7 +56,6 @@ const allWorkProjects = await Astro.glob("./workProjects/*.md");
         }
       </div>
     </section>
-    <!-- 2ND TESTIMONIAL VVV -->
     <AboutContent
       title="Running Quail- testimonial goes here!"
       paragraph1="onboarding- elaborate Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis quo et doloremque excepturi molestias iste optio, sed voluptate culpa recusandae quos temporibus velit accusamus natus porro rem ipsa perferendis laudantium."
@@ -53,30 +64,28 @@ const allWorkProjects = await Astro.glob("./workProjects/*.md");
       paragraph4="launch- elaborate"
       img="https://images.pexels.com/photos/3585001/pexels-photo-3585001.jpeg?_gl=1*sm8kor*_ga*MTA5MDE3MzI2MS4xNzU4MjUwMDM4*_ga_8JE65Q40S6*czE3NzQxMzczNTMkbzQyJGcxJHQxNzc0MTM3MzY4JGo0NSRsMCRoMA.."
     />
-    <!-- </section> -->
-
-    <!-- LAST SECTION TO CONVINCE CTA V-->
-    <!-- LAST SECTION TO CONVINCE CTA ^-->
-
-    <!-- TODO: WORKS SECTION VVV -->
-    <section id="creative-works" class="border-b border- lg:px-5 mt-5">
-      <CenterPageBanner BannerTitle="Creative Works" />
-      <div id="grid" class="grid md:grid-cols-2 grid-cols-1 md:p-5">
-        {
-          allWorkProjects.map((work) => (
-            <ProjectCard
-              title={work.frontmatter.title}
-              image={work.frontmatter.image.url}
-              alt={work.frontmatter.image.alt}
-              url={work.url}
-              testItem1={work.frontmatter.testItem1}
-              websiteNumber={work.frontmatter.websiteNumber}
-            />
-          ))
-        }
-      </div>
-    </section>
-    <!-- TODO: WRITING (future creative projects) SECTION ^^^ -->
+  </div>
+  <!-- *: WORKS ANCHOR VVV -->
+  <section id="creative-works-ANCHOR" class="border-b border- lg:px-5 mt-5">
+    <CenterPageBanner BannerTitle="Creative Works" />
+    <div id="grid" class="grid md:grid-cols-2 grid-cols-1 md:p-5">
+      {
+        allWorkProjects.map((work) => (
+          <ProjectCard
+            title={work.frontmatter.title}
+            image={work.frontmatter.image.url}
+            alt={work.frontmatter.image.alt}
+            url={work.url}
+            testItem1={work.frontmatter.testItem1}
+            websiteNumber={work.frontmatter.websiteNumber}
+          />
+        ))
+      }
+    </div>
+  </section>
+  <!-- *: CONTACT ANCHOR vvvvvvvvvvvvvvvvvvvvv -->
+  <div id="contact-ANCHOR" class="bg-test1">
+    <CenterPageBanner BannerTitle="Contact" />
     <div id="web-dev-intro2" class="bg-">
       <div id="">
         <AboutContent
@@ -89,19 +98,15 @@ const allWorkProjects = await Astro.glob("./workProjects/*.md");
         />
       </div>
     </div>
-    <!--  -->
-    <div id="contact">
-      <CenterPageBanner BannerTitle="Contact" />
-      <div id="web-dev-intro1">
-        <AboutContent
-          title="Web Development-ADDRESS KEY PROBLEM"
-          paragraph1="Pain Points to Address- You’re struggling to get [desirable result] because you don't have [missing piece]"
-          paragraph2="You have [example], but you aren't [achieving this result]"
-          paragraph3="How does this make them feel?"
-          paragraph4="Have you been in the same situation? How to overcome this? How can you help them do the same? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima deserunt accusantindae quo adipisci dignissimos! Pariatur, suscipit exercitationem."
-          img="https://images.pexels.com/photos/3585001/pexels-photo-3585001.jpeg?_gl=1*sm8kor*_ga*MTA5MDE3MzI2MS4xNzU4MjUwMDM4*_ga_8JE65Q40S6*czE3NzQxMzczNTMkbzQyJGcxJHQxNzc0MTM3MzY4JGo0NSRsMCRoMA.."
-        />
-      </div>
+    <div id="web-dev-intro1">
+      <AboutContent
+        title="Web Development-ADDRESS KEY PROBLEM"
+        paragraph1="Pain Points to Address- You’re struggling to get [desirable result] because you don't have [missing piece]"
+        paragraph2="You have [example], but you aren't [achieving this result]"
+        paragraph3="How does this make them feel?"
+        paragraph4="Have you been in the same situation? How to overcome this? How can you help them do the same? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima deserunt accusantindae quo adipisci dignissimos! Pariatur, suscipit exercitationem."
+        img="https://images.pexels.com/photos/3585001/pexels-photo-3585001.jpeg?_gl=1*sm8kor*_ga*MTA5MDE3MzI2MS4xNzU4MjUwMDM4*_ga_8JE65Q40S6*czE3NzQxMzczNTMkbzQyJGcxJHQxNzc0MTM3MzY4JGo0NSRsMCRoMA.."
+      />
     </div>
-  </section>
+  </div>
 </MainLayout>
