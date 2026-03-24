@@ -9,18 +9,14 @@ import PkgCard from "../components/shared/PkgCard.astro";
 const websitePackages = await Astro.glob("./websitePackages/*.md");
 import AboutContent from "../components/shared/AboutContent.astro";
 import CenterPageBanner from "../components/shared/CenterPageBanner.astro";
-import SiteCard from "../components/shared/SiteCard.astro";
-const allFeaturedSites = await Astro.glob("./posts/*.md");
+import ProjectCard from "../components/shared/ProjectCard.astro";
+const allWorkProjects = await Astro.glob("./workProjects/*.md");
 ---
 
 <MainLayout>
   <Hero />
   <BuildAuthority />
-  <!-- TODO: CONTENT- what problem LC solves, ETC -->
   <AddressKeyProblem />
-
-  <!-- TODO: CONTENT-  4 sq grid v-->
-
   <HowItWorks />
   <section id="whats-included" class="2xl:mx-[90px] p-5">
     <WhatsIncluded />
@@ -28,7 +24,7 @@ const allFeaturedSites = await Astro.glob("./posts/*.md");
       <CenterPageBanner BannerTitle="web development" />
       <div
         id="creative-templates-pkgs-grid"
-        class="bg- lg:px-5 grid sm:grid-cols-2 gap-5 mt-5 bg-"
+        class="bg- lg:px-5 grid sm:grid-cols-3 gap-5 mt-5 pt-5 bg-"
       >
         <!-- TODO: add pricing to packages (web design templates) v  -->
         {
@@ -36,6 +32,7 @@ const allFeaturedSites = await Astro.glob("./posts/*.md");
             <PkgCard
               no={caseStudy.frontmatter.no}
               title={caseStudy.frontmatter.title}
+              paragraph={caseStudy.frontmatter.paragraph}
               image={caseStudy.frontmatter.image.url}
               alt={caseStudy.frontmatter.image.alt}
               url={caseStudy.url}
@@ -61,16 +58,13 @@ const allFeaturedSites = await Astro.glob("./posts/*.md");
     <!-- LAST SECTION TO CONVINCE CTA V-->
     <!-- LAST SECTION TO CONVINCE CTA ^-->
 
-    <!-- TODO: WRITING SECTION VVV -->
-    <section id="writing" class="border-b border- lg:px-5 mt-5">
-      <CenterPageBanner BannerTitle="Creative Projects" />
-      <div
-        id="grid"
-        class="grid 2xl:grid-cols-3 md:grid-cols-2 grid-cols-1 md:p-5"
-      >
+    <!-- TODO: WORKS SECTION VVV -->
+    <section id="creative-works" class="border-b border- lg:px-5 mt-5">
+      <CenterPageBanner BannerTitle="Creative Works" />
+      <div id="grid" class="grid md:grid-cols-2 grid-cols-1 md:p-5">
         {
-          allFeaturedSites.map((work) => (
-            <SiteCard
+          allWorkProjects.map((work) => (
+            <ProjectCard
               title={work.frontmatter.title}
               image={work.frontmatter.image.url}
               alt={work.frontmatter.image.alt}

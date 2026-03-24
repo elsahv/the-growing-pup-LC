@@ -9,7 +9,7 @@ category1: "category1"
 category2: "category2"
 author: "Astro Learner"
 image:
-  url: "https://dl.dropboxusercontent.com/scl/fi/36vnm2e663uln6akmex4d/lc.png?rlkey=lgim54nbp0u11mviylee29hyj&st=2fa2x283&dl=0"
+  url: "https://dl.dropboxusercontent.com/scl/fi/0kaamz8nlz7q1mlzkbjr2/doublepanel-screenshot.jpg?rlkey=zq5l55wn183j3v1220u0qubz7&st=mzkg11zg&dl=0"
   alt: "The full Astro logo."
 websiteUrl: "https://elsahovey.com"
 githubUrl: "https://github.com/elsahv/-the-running-quail"
