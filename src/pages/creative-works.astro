@@ -1,0 +1,26 @@
+---
+import CenterPageBanner from "../components/shared/CenterPageBanner.astro";
+import ProjectCard from "../components/shared/ProjectCard.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+const allWorkProjects = await Astro.glob("./workProjects/*.md");
+---
+
+<MainLayout>
+  <section id="creative-works-ANCHOR" class="bg- border-b border- lg:px-5 mt-5">
+    <CenterPageBanner BannerTitle="Creative Works" />
+    <div id="grid" class="grid md:grid-cols-2 grid-cols-1 md:p-5">
+      {
+        allWorkProjects.map((work) => (
+          <ProjectCard
+            title={work.frontmatter.title}
+            image={work.frontmatter.image.url}
+            alt={work.frontmatter.image.alt}
+            url={work.url}
+            testItem1={work.frontmatter.testItem1}
+            websiteNumber={work.frontmatter.websiteNumber}
+          />
+        ))
+      }
+    </div>
+  </section>
+</MainLayout>

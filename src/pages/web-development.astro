@@ -1,0 +1,43 @@
+---
+import AboutContent from "../components/shared/AboutContent.astro";
+import CenterPageBanner from "../components/shared/CenterPageBanner.astro";
+import PkgCard from "../components/shared/PkgCard.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+const websitePackages = await Astro.glob("./websitePackages/*.md");
+---
+
+<MainLayout>
+  <div id="ANCHOR">
+    <section id="web-dev-template-pkgs" class="bg-">
+      <CenterPageBanner BannerTitle="web development" />
+      <div
+        id="template-pkgs-grid"
+        class="bg- lg:px-5 grid lg:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-5 mt-5 pt-5 bg-"
+      >
+        {
+          websitePackages.map((caseStudy) => (
+            <PkgCard
+              no={caseStudy.frontmatter.no}
+              title={caseStudy.frontmatter.title}
+              paragraph={caseStudy.frontmatter.paragraph}
+              image={caseStudy.frontmatter.image.url}
+              alt={caseStudy.frontmatter.image.alt}
+              url={caseStudy.url}
+              testItem1={caseStudy.frontmatter.testItem1}
+              language={caseStudy.frontmatter.language}
+              backend={caseStudy.frontmatter.backend}
+            />
+          ))
+        }
+      </div>
+    </section>
+    <AboutContent
+      title="Running Quail- testimonial goes here!"
+      paragraph1="onboarding- elaborate Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis quo et doloremque excepturi molestias iste optio, sed voluptate culpa recusandae quos temporibus velit accusamus natus porro rem ipsa perferendis laudantium."
+      paragraph2="discovery- elaborate/"
+      paragraph3="development-- elaborateLorem, ipsum dolor sit amet consectetur adipisicing elit. Quis quo et doloremque excepturi molestias iste optio, sed voluptate culpa recusandae quos temporibus velit accusamus natus porro rem ipsa perferendis laudantium."
+      paragraph4="launch- elaborate"
+      img="https://images.pexels.com/photos/3585001/pexels-photo-3585001.jpeg?_gl=1*sm8kor*_ga*MTA5MDE3MzI2MS4xNzU4MjUwMDM4*_ga_8JE65Q40S6*czE3NzQxMzczNTMkbzQyJGcxJHQxNzc0MTM3MzY4JGo0NSRsMCRoMA.."
+    />
+  </div>
+</MainLayout>

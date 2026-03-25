@@ -2,20 +2,20 @@
 const items = [
   {
     icon: "start here",
-    link: "/#start-here-ANCHOR ",
+    link: "/#start-here ",
   },
   {
     icon: "web development",
-    link: "/#web-development-ANCHOR",
+    link: "/web-development",
   },
   {
     icon: "creative works",
-    link: "/#creative-works-ANCHOR",
+    link: "/creative-works",
   },
 
   {
     icon: "contact",
-    link: "/#contact-ANCHOR ",
+    link: "/contact ",
   },
 ];
 ---
@@ -27,7 +27,7 @@ const items = [
   {
     items.map((item) => (
       <a href={item.link}>
-        <li class="md:text-xl font-semibold px-2 hover:text-[#a3b18a]">
+        <li class="md:text-xl text-sm font-semibold px-2 bg- hover:text-[#a3b18a]">
           {item.icon}
         </li>
       </a>
