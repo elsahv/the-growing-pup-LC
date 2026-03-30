@@ -1,11 +1,53 @@
 ---
+import WhatsIncluded from "../components/sections/WhatsIncluded.astro";
 import CenterPageBanner from "../components/shared/CenterPageBanner.astro";
 import ProjectCard from "../components/shared/ProjectCard.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import AddressKeyProblem from "../sandbox/AddressKeyProblem.astro";
 const allWorkProjects = await Astro.glob("./workProjects/*.md");
+
+import AboutContent from "../components/shared/AboutContent.astro";
 ---
 
 <MainLayout>
+  <div id="" class="">
+    <CenterPageBanner BannerTitle="START HERE" />
+    <div id="web-dev-intro1">
+      <AboutContent
+        title="RQ"
+        paragraph1="Pain Points to Address- You’re struggling to get [desirable result] because you don't have [missing piece]"
+        paragraph2="You have [example], but you aren't [achieving this result]"
+        paragraph3="How does this make them feel?"
+        paragraph4="Have you been in the same situation? How to overcome this? How can you help them do the same? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima deserunt accusantindae quo adipisci dignissimos! Pariatur, suscipit exercitationem."
+        img="https://images.pexels.com/photos/3585001/pexels-photo-3585001.jpeg?_gl=1*sm8kor*_ga*MTA5MDE3MzI2MS4xNzU4MjUwMDM4*_ga_8JE65Q40S6*czE3NzQxMzczNTMkbzQyJGcxJHQxNzc0MTM3MzY4JGo0NSRsMCRoMA.."
+      />
+    </div>
+    <div id="web-dev-intro2" class="bg-">
+      <!-- TODO: NEW AIDA vv -->
+      <AboutContent
+        title="HoveyRoofing"
+        paragraph1="interestParagraph"
+        paragraph2="interestParagraph"
+        paragraph3="desireParagraph"
+        paragraph4="desireParagraph"
+        img="https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg"
+      />
+    </div>
+  </div>
+
+  <section id="whats-included" class="bg-">
+    <div id="web-dev-intro1" class="bg-">
+      <AboutContent
+        title="The Indoor Jungle Project"
+        paragraph1="Most small business websites don’t fail because of effort— they fail because they’re built on shaky ground."
+        paragraph2="Slow load times. Clunky templates. Hours spent tweaking things that never quite feel right."
+        paragraph3="Laughing Coyote is built to fix that—clean, fast, and intentional from the start."
+        paragraph4="click on CTA link to see packages, and bring your business online"
+        img="https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg"
+      />
+    </div>
+  </section>
+  <!-- 
   <section id="creative-works-ANCHOR" class="bg- border-b border- lg:px-5 mt-5">
     <CenterPageBanner BannerTitle="Creative Works" />
     <div id="grid" class="grid md:grid-cols-2 grid-cols-1 md:p-5">
@@ -23,4 +65,7 @@ const allWorkProjects = await Astro.glob("./workProjects/*.md");
       }
     </div>
   </section>
+  <p>
+    <a href="/creative-works">cta to portfolio</a>
+  </p> -->
 </MainLayout>

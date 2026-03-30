@@ -294,17 +294,18 @@ section {
 
 
 #header #nav-items {
-  padding: 0 45px;
+  /* padding: 0 45px;
   margin-bottom: 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
+  background: blue; */
   
   
   @media (max-width: 1040px) {
-   flex-direction: column;
-   padding: 0;
+   /* flex-direction: column; */
+   /* padding: 0; */
      /* align-items: flex-start; */
   }
 }
@@ -314,4 +315,9 @@ section {
   /* background: lightgreen; */
   display: flex;
  
+}
+
+
+.box {
+  border: 1px solid #15616D;
 }

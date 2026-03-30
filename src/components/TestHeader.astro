@@ -1,0 +1,64 @@
+---
+// src/components/Header.astro
+
+const { isLoggedIn = false, isAdmin = false } = Astro.props;
+const currentPath = Astro.url.pathname;
+
+const navLinks = [
+  { label: "home", href: "/", show: true },
+  { label: "creative works", href: "/creative-works", show: true },
+  { label: "template packages", href: "/web-development", show: true },
+  { label: "contact", href: "/contact", show: true },
+];
+---
+
+<header
+  class="w-full fixed top-0 right-0 z-10 bg-parchment border border-carribean"
+>
+  <div class="mx-auto flex items-end px-4 py-4 bg- w-full">
+    <!-- Logo -->
+    <a href="/" class="flex-none font-semibold tracking-tight text-lg">
+      <div id="logo" class="text-4xl pb-1 mr-5 opacity-90 bg-">
+        <a href="/">
+          <img
+            src="https://dl.dropboxusercontent.com/scl/fi/xzfhk2jletg2hqwc9ecks/coyote.png?rlkey=xtfjf7plvgb8y3fjxdij0vdt5&st=run4yzui&dl=0"
+            alt=""
+            width="145px"
+            height="145px"
+            class="-scale-x-100"
+          />
+        </a>
+      </div>
+    </a>
+    <!-- Nav -->
+    <nav
+      aria-label="Main navigation"
+      class="bg- flex-auto 2xl:flex-row flex-col bg-"
+    >
+      <ul
+        id="nav-items"
+        class="bg- flex 2xl:flex-row flex-col justify-end 2xl:gap-2"
+      >
+        {
+          navLinks
+            .filter((link) => link.show)
+            .map((link) => (
+              <li class="bg- flex justify-end">
+                <a
+                  href={link.href}
+                  class:list={[
+                    "rounded-full px-5 2xl:py-0 py-1  transition",
+                    currentPath === link.href
+                      ? "text-black underline text-2xl"
+                      : "text-carribean text-lg",
+                  ]}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>

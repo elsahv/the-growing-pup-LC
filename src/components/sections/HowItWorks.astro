@@ -1,24 +1,22 @@
 ---
-const items = [
+import DynamicGrid from "../shared/DynamicGrid.astro";
+
+const items4 = [
   {
     title: "1. ONBOARDING PHASE",
-    description:
-      "Client signs up → Chooses plan + fills out onboarding form, You select a base layout or start custom in Astro.",
+    body: "Client signs up → Chooses plan + fills out onboarding form, You select a base layout or start custom in Astro.",
   },
   {
     title: "2. DISCOVERY (creative) PHASE",
-    description:
-      "This is where I take the layout and change the code to create a custom website that fits your business, personality, goals...     sitemap, wireframe site--> mockup first draft--> mockup revised, final draft",
+    body: "This is where I take the layout and change the code to create a custom website that fits your business, personality, goals...     sitemap, wireframe site--> mockup first draft--> mockup revised, final draft",
   },
   {
     title: "3. DEVELOPMENT PHASE ",
-    description:
-      "set up vercel temp--> convert mockups into code--> go over temp with client --> final revisions. ",
+    body: "set up vercel temp--> convert mockups into code--> go over temp with client --> final revisions. ",
   },
   {
     title: "4. LAUNCH PHASE",
-    description:
-      "final review and Q&A--> move local website to live server,hosting,client training--> final payment. set up vercel temp--> convert mockups into code--> go over temp with client --> final revisions",
+    body: "final review and Q&A--> move local website to live server,hosting,client training--> final payment. set up vercel temp--> convert mockups into code--> go over temp with client --> final revisions",
   },
 ];
 ---
@@ -26,35 +24,20 @@ const items = [
 <div id="how-it-works" class="mt-[90px] p- bg-">
   <div id="4-sq-grid" class="">
     <div class="pt-3 pb-2">
-      <h2 class="pl-1 text-4xl font- border-b border-black">How it Works</h2>
-      <p class="font- pl-2 pt-5">
+      <h2 class="pl-1 text-2xl underline">How it Works</h2>
+      <p class="text-3xl pt-1">
         This is a step-by-step process on how Laughing Coyote Dev works.
       </p>
+      <!--  see how I work- to web-development page /web design packages  -->
     </div>
     <!-- TODO: GIVE STEP- BY-STEP GUIDE FROM START TO FINISH, keep in simple to give your client an easy map of how things work form first intereaction with you to end result-->
-    <div id="how-it-works-container" class="bg-">
-      <div
-        id="how-it-works-grid"
-        class="grid 2xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mt-5 pt-3"
-      >
-        {
-          items.map((item) => (
-            <div
-              id="sq-wrapper"
-              class="flex justify-center bg-teal text-parchment sq-styles-teal px-2"
-            >
-              <div id="sq-container" class="bg-carribean p-3 w-full bg-">
-                <div id="container">
-                  <p class="text-md  ">{item.description}</p>
-                </div>
-                <h3 class="text-2xl font-bold flex justify-end pt-5">
-                  {item.title}
-                </h3>
-              </div>
-            </div>
-          ))
-        }
-      </div>
-    </div>
+
+    <DynamicGrid items={items4} columns={2} />
+    <a href="/web-development/#ANCHOR">
+      <button class="bg-carribean text-papaya text-3xl px-2 mt-5 ml-1"
+        >Link CTA
+      </button>
+      {"--->"}</a
+    >
   </div>
 </div>
