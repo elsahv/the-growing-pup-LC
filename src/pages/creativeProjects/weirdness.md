@@ -29,3 +29,5 @@ tags: ["astro", "blogging", "learning in public"]
 
 Share the backstory of how the website came into existence. This could include the inspiration behind its creation, the individuals or team involved, and any challenges or obstacles they faced in bringing it to life.
 <br><br>
+
+#morongo basin weirdness

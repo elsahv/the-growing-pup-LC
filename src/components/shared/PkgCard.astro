@@ -1,33 +1,44 @@
 ---
+import ButtonProps from "./ButtonProps.astro";
+import { PiFolderOpenBold, PiGithubLogoDuotone } from "react-icons/pi";
+
 const frontmatter = Astro.props;
 const { title, paragraph, image, alt, url } = frontmatter;
 ---
 
 <!-- TODO: add pricing to packages (web design templates) v  --><!-- PORTFIOLIO/ PACKAGES --><!-- SMOOTH TRANSITION BETWEEN KITS, PUP TO CARNIVORE, TO ALPHA  -->
-<div id="CARD" class="bg-papaya text-onyx py-5 opacity-80">
+<div id="CARD" class="text-onyx py-5 opacity-80">
   <!-- <div class="bg- pt-1 pr-l">
     <h3 class="text-xl">{no}.</h3>
   </div> -->
 
   <div class="">
-    <div id="sq1" class="2xl:col-span-4">
+    <div id="sq1" class="bg-carribean text-parchment 2xl:col-span-4">
+      <!-- <span class="text-sm">01. </span> -->
+      <h3 class="text-2xl pb-1 pl-2 pt-2">{title}</h3>
       <a href={url}>
         <img
           src={image}
           class="opacity-90 hover:opacity-100 duration-500 mt-1 mr-5 p- rounded border bg-[#f9f9f9] border-rosyBrown hover:border-cerulean drop-shadow-xl hover:drop-shadow-3xl"
           alt={alt}
         />
-        <div
-          id="container"
-          class="py-1 px-3 opacity-60 hover:opacity-100 duration-500 bg-papaya border border-onyx"
-        >
-          <!-- <span class="text-sm">01. </span> -->
-          <h3 class="text-2xl">{title}</h3>
-          <p class="text-md">
-            {paragraph}
-          </p>
-        </div>
       </a>
+      <div id="container" class="p-3 bg- border border-onyx">
+        <p class="text-md">
+          {paragraph}
+        </p>
+
+        <a href={url}>
+          <div class="text-2xl flex items-center mt-2 space-x-2">
+            <button
+              class="text-xl underline opacity-100 hover:opacity-60 duration-500 mr-3"
+              >visit template</button
+            >
+            <PiFolderOpenBold />
+            <PiGithubLogoDuotone />
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </div>

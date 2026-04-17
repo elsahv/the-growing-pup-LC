@@ -1,15 +1,16 @@
 ---
 id: 1
 layout: ../../layouts/PostLayout.astro
-title: "The Running Quail"
-websiteNumber: "01"
-pubDate: 12/24/25
+title: "Hovey Roofing"
+websiteNumber: "02"
+pubDate: 1/3/26
 testItem1: "A developer/ story brand writing portfolio. Share the backstory of how the website came into existence. This could include the inspiration behind its creation, the individuals or team involved, and any challenges or obstacles they faced in bringing it to life."
 category1: "category1"
 category2: "category2"
 author: "Astro Learner"
 image:
-  url: "https://dl.dropboxusercontent.com/scl/fi/0kaamz8nlz7q1mlzkbjr2/doublepanel-screenshot.jpg?rlkey=zq5l55wn183j3v1220u0qubz7&st=mzkg11zg&dl=0"
+  url: "https://dl.dropboxusercontent.com/scl/fi/2qjwjdw2djppjpcqnbqkv/hovroof1.jpg?rlkey=04pj0osakfmuzs8uy1hybmk0z&st=363oyc0d&dl=0
+"
   alt: "The full Astro logo."
 websiteUrl: "https://elsahovey.com"
 githubUrl: "https://github.com/elsahv/-the-running-quail"
@@ -28,3 +29,5 @@ tags: ["astro", "blogging", "learning in public"]
 
 Share the backstory of how the website came into existence. This could include the inspiration behind its creation, the individuals or team involved, and any challenges or obstacles they faced in bringing it to life.
 <br><br>
+
+#palm springs- inspired modernism

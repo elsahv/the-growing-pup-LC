@@ -9,7 +9,7 @@ const Sq2 = () => {
         />
 
         <h3 className="font-semibold text-right mr-3 pr-5 pt-1">
-          Software Development
+         Brochure websites for small businesses** (1–5 pages, fast turnaround)
         </h3>
       </div>
     </div>

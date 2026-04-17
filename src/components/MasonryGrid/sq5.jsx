@@ -3,7 +3,7 @@ const Sq5 = () => {
     <div id="sq5" className="m-2 flex md:flex-row flex-col">
       <div id="left-side" className="bg- flex justify-center items-center">
         <p className="pr-1 pl-1 pb-2">
-          A custom website that fits your business, personality, goals... and
+          An online home that fits your business, personality, goals... and
           you alone.
         </p>
       </div>

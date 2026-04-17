@@ -10,62 +10,14 @@ const { frontmatter } = Astro.props;
   <div id="website-content" class="pl- dropshadow-3xl mt-3">
     <!--* 1st GALLERY V-->
     <!-- ?what if these gallery imgs lead to other website package cta?? v-->
-    <div id="1st-gallery" class="bg- pt-1 mt-5 bg-">
-      <div
-        id="gallery-grid"
-        class="mt-5 2xl grid 2xl:grid-cols-4 grid-cols-2 gap-1 py-3"
-      >
-        <div id="img-1" class="">
-          <a href="/">
-            <img
-              src={frontmatter.EndGalleryImg1}
-              alt=""
-              class="2xl:h-[200px] 2xl:w-full w-[230px] border border-black"
-            />
-          </a>
-        </div>
-
-        <div id="img-2" class="">
-          <a href="/">
-            <img
-              src={frontmatter.EndGalleryImg2}
-              alt=""
-              class="2xl:h-[200px] 2xl:w-full w-[230px] border border-black"
-            />
-          </a>
-        </div>
-        <div id="img-3" class="">
-          <a href="/">
-            <img
-              src={frontmatter.EndGalleryImg3}
-              alt=""
-              class="2xl:h-[200px] 2xl:w-full w-[230px] border border-black"
-            />
-          </a>
-        </div>
-
-        <div id="img-4" class="">
-          <a href="/">
-            <img
-              src={frontmatter.EndGalleryImg4}
-              alt=""
-              class="2xl:h-[200px] 2xl:w-full w-[230px] border border-black"
-            />
-          </a>
-        </div>
-      </div>
-    </div>
     <!-- ?what if these gallery imgs lead to other website package cta?? ^-->
 
     <!-- TODO: AIDA --V -->
-    <div
-      id="BannerTitle-wrapper"
-      class="bg-text-parchment pb-5 mt-[150px] pt-5 pl-5"
-    >
+    <div id="BannerTitle-wrapper" class="pb-5 mt-[180px] pt-5 pl-5">
       <div id="BannerTitle-section" class="pl-5 ml-5">
         <div id="title-banner" class="">
           <h1 class="2xl:text-5xl md:text-4xl text-3xl pb-2 pt-2 font-semibold">
-            Case Study: {frontmatter.title}
+            {frontmatter.title}
           </h1>
         </div>
 
@@ -91,7 +43,7 @@ const { frontmatter } = Astro.props;
             />
           </div>
           <div id="" class="bg- col-span-2 bg- p-5 2xl:ml-3 mt-[55px] text-lg">
-            <div class="bg- text- border border-black p-5">
+            <div class="bg-carribean text-parchment border border-black p-5">
               <h2 class="text-3xl font-bold">
                 {frontmatter.aboutTemplate}
               </h2>
@@ -242,7 +194,6 @@ const { frontmatter } = Astro.props;
               Package	Position
               Launch:	1-page site
               Growth:	5-page business site
-              Pro:	custom multi-page
               That framing sells much better. -->
     <section id="wrapper" class="bg- text-right py-5 my-5 pr-3">
       <h4 class="font-semibold pb-1">Explore other Template/ Kit Options...</h4>

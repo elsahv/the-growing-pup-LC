@@ -1,18 +1,19 @@
 ---
 export interface Props {
   BannerTitle: string;
+  BannerParagraph: string;
 }
 
-const { BannerTitle } = Astro.props as Props;
+const { BannerTitle, BannerParagraph } = Astro.props as Props;
 ---
 
-<div class="borde border-munsell text- py-2 mt-[150px]">
-  <h1 class="2xl:text-5xl md:text-4xl text-3xl pb-2 pt-2 font-bold uppercase">
-    {BannerTitle}
-  </h1>
-  <p>
-    web design templates for the creative mind. deserunt similique accusantium
-    in possimus modi, adipisci hic quae officia dolorum enim, et neque. Nesciunt
-    officia provident repudiandae obcaecati veniam!
-  </p>
+<div id="" class="bg- pt-5 mt-5">
+  <div class="py-2 mt-[155px] 2xl:p-0 p-5">
+    <h1 class="2xl:text-5xl md:text-4xl text-3xl pb-2 pt-2 font-bold uppercase">
+      {BannerTitle}
+    </h1>
+    <p>
+      {BannerParagraph}
+    </p>
+  </div>
 </div>

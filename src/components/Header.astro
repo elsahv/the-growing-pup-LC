@@ -3,22 +3,24 @@ import NavItems from "./NavItems.astro";
 ---
 
 <header
-  id=""
-  class="grid grid-cols-2 space-x-5 pt-5 bg-parchment z-10 w-full border-b border-gray-400 pb-2"
+  class="w-full fixed top-0 right-0 z-10 bg-parchment border border-carribean"
 >
-  <div id="logo" class="text-4xl pb-1 mr-5 opacity-90">
-    <a href="/">
-      <img
-        src="https://dl.dropboxusercontent.com/scl/fi/xzfhk2jletg2hqwc9ecks/coyote.png?rlkey=xtfjf7plvgb8y3fjxdij0vdt5&st=run4yzui&dl=0"
-        alt=""
-        width="145px"
-        height="145px"
-        class="-scale-x-100"
-      />
+  <div class="mx-auto flex items-end px-4 py-4 bg- w-full">
+    <!-- Logo v-->
+    <a href="/" class="flex-none font-semibold tracking-tight text-lg">
+      <div id="logo" class="text-4xl pb-1 mr-5 opacity-90 bg-">
+        <a href="/">
+          <img
+            src="https://dl.dropboxusercontent.com/scl/fi/xzfhk2jletg2hqwc9ecks/coyote.png?rlkey=xtfjf7plvgb8y3fjxdij0vdt5&st=run4yzui&dl=0"
+            alt=""
+            width="145px"
+            height="145px"
+            class="-scale-x-100"
+          />
+        </a>
+      </div>
     </a>
-  </div>
-
-  <div class="">
+    <!-- Nav v-->
     <NavItems />
   </div>
 </header>

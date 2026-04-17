@@ -9,7 +9,7 @@ const Sq1 = () => {
         alt=""
         className="sq-styles  "
       />
-      <h3 className="pl-3 font-bold">Web Design</h3>
+      <h3 className="pl-3 font-bold">Strong options that fit your cozy / colorful vibe:</h3>
     </div>
   );
 };
