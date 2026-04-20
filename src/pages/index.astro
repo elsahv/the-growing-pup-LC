@@ -1,78 +1,39 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import CenterPageBanner from "../components/shared/CenterPageBanner.astro";
-import AboutContent from "../components/shared/AboutContent.astro";
-import ProjectCard from "../components/shared/ProjectCard.astro";
 import ContactBlock from "../components/blocks/ContactBlock.astro";
+import SalesPtBlock from "../components/blocks/salesPtBlock/index.astro";
 import FunnelBlock from "../components/blocks/funnelBlock/index.astro";
 import AboutBlock from "../components/blocks/aboutBlock/index.astro";
-import TestPkgs from "../components/sections/TestPkgs.astro";
+import ProjectCard from "../components/shared/ProjectCard.astro";
 const allCreativeProjects = await Astro.glob("./creativeProjects/*.md");
 ---
 
 <MainLayout>
   <FunnelBlock />
   <AboutBlock />
-  <!--  -->
-  <section id="creative-works-wrapper" class="bg-">
-    <div id="creative-works-container" class="">
-      <section id="whats-included" class="bg-">
-        <div id="web-dev-intro1" class="bg-">
-          <AboutContent
-            title="The Indoor Jungle Project"
-            paragraph1="Most small business websites don’t fail because of effort— they fail because they’re built on shaky ground."
-            paragraph2="Slow load times. Clunky templates. Hours spent tweaking things that never quite feel right."
-            paragraph3="Laughing Coyote is built to fix that—clean, fast, and intentional from the start."
-            paragraph4="click on CTA link to see packages, and bring your business online"
-            img="https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg"
-          />
-        </div>
-      </section>
-      <!-- TODO: CHANGE writing to creative works block) -->
-      <section id="creative-works" class="bg- text- lg:px-5 mt-5">
-        <CenterPageBanner
-          BannerTitle="Creative Works"
-          BannerParagraph=" web design templates for the creative mind.  I'M TIRED OF GENERIC TEMPLATES!"
-        />
-        <div id="grid" class="grid md:grid-cols-2 grid-cols-1">
-          {
-            allCreativeProjects.map((creativeProject) => (
-              <ProjectCard
-                title={creativeProject.frontmatter.title}
-                image={creativeProject.frontmatter.image.url}
-                alt={creativeProject.frontmatter.image.alt}
-                url={creativeProject.url}
-                testItem1={creativeProject.frontmatter.testItem1}
-                websiteNumber={creativeProject.frontmatter.websiteNumber}
-              />
-            ))
-          }
-        </div>
-      </section>
-    </div>
-  </section>
-
-  <div id="web-dev-intro1" class="bg-">
-    <AboutContent
-      title="Reminder- about LC and why we can help "
-      paragraph1="**Personal sites for BUSINESS creatives** (artists, makers, therapists, writers). Websites for small businesses who hate tech. Simple sites for local businesses that just need to work"
-      paragraph2="Coyotes are scrappy, clever, resourceful. Lean into that"
-      paragraph3="Laughing Coyote is built to fix that—clean, fast, and intentional from the start."
-      paragraph4="Laughing Coyote Dev” is **not** a generic dev name. It has personality, warmth, and a bit of mischief. That gives you permission to build things that feel human, friendly, and slightly unconventional — without losing professionalism"
-      img="https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg"
-    />
-  </div>
-
-  <!--  -->
-  <section id="salesPoint-block" class="bg- border-t border- lg:px-5 mt-5">
-    <div id="project-templates" class="">
+  <section id="ContentBlock" class="bg-">
+    <div id="creative-works" class="lg:px-5 mt-5">
       <CenterPageBanner
-        BannerTitle="Template Packages"
-        BannerParagraph="Here "
+        BannerTitle="Creative Works"
+        BannerParagraph=" web design templates for the creative mind.  I'M TIRED OF GENERIC TEMPLATES!"
       />
-      <TestPkgs />
+      <div id="grid" class="grid md:grid-cols-2 grid-cols-1">
+        {
+          allCreativeProjects.map((creativeProject) => (
+            <ProjectCard
+              title={creativeProject.frontmatter.title}
+              image={creativeProject.frontmatter.image.url}
+              alt={creativeProject.frontmatter.image.alt}
+              url={creativeProject.url}
+              testItem1={creativeProject.frontmatter.testItem1}
+              websiteNumber={creativeProject.frontmatter.websiteNumber}
+            />
+          ))
+        }
+      </div>
     </div>
   </section>
-  <!--  -->
+  <SalesPtBlock />
   <ContactBlock />
 </MainLayout>

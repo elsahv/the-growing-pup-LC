@@ -1,17 +1,17 @@
 ---
 import CenterPageBanner from "../../shared/CenterPageBanner.astro";
-import Gallery from "./Gallery.astro";
+
 import HowItWorks from "./HowItWorks.astro";
-import RoofTestimonial from "./RoofTestimonial.astro";
-import RQTestimonial from "./RQTestimonial.astro";
+import WhatsIncluded from "./WhatsIncluded.astro";
 ---
 
-<section id="about-block">
-  <div id="web-development">
-    <CenterPageBanner BannerTitle="Web Development" />
-    <Gallery />
-    <RoofTestimonial />
-    <HowItWorks />
-    <RQTestimonial />
+<div id="AboutBlock" class="bg-">
+  <div id="web-development" class="">
+    <CenterPageBanner
+      BannerTitle="Web Development"
+      BannerParagraph="Below is the new WhatsIncluded section"
+    />
   </div>
-</section>
+  <WhatsIncluded />
+  <HowItWorks />
+</div>
