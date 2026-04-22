@@ -18,13 +18,9 @@ p {
   font-size: 19px;  
 }
  
-
 section {
-  /* margin: 120px 0; */
+  @apply py-20 md:py-28;
 }
-
-
-
 
 .sq-styles {
   border: 1px solid #15616D;
@@ -319,5 +315,13 @@ section {
 
 
 .box {
-  border: 1px solid #15616D;
+}
+
+#TestImg {
+  border-radius: 5px;
+   border: 1px solid #313638;
+}
+
+#TestBtn {
+  border-radius: 5px;
 }

@@ -16,7 +16,7 @@ const MasonryGrid = () => {
   return (
     <div
       id="wrapper"
-      className="bg-test1 2xl:opacity-80 opacity-100 xl:py-5 xl:my-5"
+      className="bg- 2xl:opacity-80 opacity-100 xl:py-5 xl:my-5"
     >
       <div id="" className="bg- ">
         <div

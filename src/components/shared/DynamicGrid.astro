@@ -40,17 +40,18 @@ const autoFitStyle = !columns
   {
     items.map((item) => (
       <article
+        id="sq"
         class:list={[
-          "flex min-h-[220px] flex-col justify-between border border-black/15 bg-teal-70 p-5 text-stone-",
+          " flex min-h-[220px] flex-col justify-between border border-black/15 bg-carribean p-5 ",
           cardClassName,
         ]}
       >
-        <div>
-          <h3 class="mb-3  font-semibold leading-tight text-lg">
+        <div class="">
+          <h3 class="mb-3 text-papaya font-semibold leading-tight text-lg">
             {item.title}
           </h3>
 
-          <p class="text-md leading-relaxed">{item.body}</p>
+          <p class="text-parchment text-md leading-relaxed">{item.body}</p>
         </div>
 
         {item.href && (
