@@ -64,28 +64,46 @@ const services = [
       <div class="mx-auto grid max-w-5xl grid-cols-1 gap-6 px-6 md:grid-cols-2">
         {
           services.map((service) => (
-            <article class="flex min-h-[200px] items-center justify-between gap-6 rounded-2xl bg-carribean border border-black px-8 py-8 text-white shadow-sm">
+            <article class="bg-[#177E8D] text-papaya flex min-h-[200px] items-center justify-between gap-6 rounded-2xl bg- border border-black px-8 py-8 text- shadow-sm">
               <div class="max-w-sm">
                 <h3 class="text-3xl font-bold leading-tight tracking-tight">
                   {service.title}
                 </h3>
 
-                <p class="mt-4 text-base leading-relaxed text-white/90">
+                <p class="mt-4 text-base leading-relaxed">
                   {service.description}
                 </p>
               </div>
 
-              <div class="bg-papaya rounded-2xl flex-shrink-0 p-5">
+              <div class="bg-teal-500 rounded-2xl border border-cerulean flex-shrink-0 p-5">
                 {service.icon === "rocket" && (
-                  <img src="/icons/folder.png" width="96" height="86" alt="" />
+                  <img
+                    src="/icons/folder.png"
+                    width="96"
+                    height="86"
+                    alt=""
+                    class=""
+                  />
                 )}
 
                 {service.icon === "spark" && (
-                  <img src="/icons/folder.png" width="96" height="86" alt="" />
+                  <img
+                    src="/icons/folder.png"
+                    width="96"
+                    height="86"
+                    alt=""
+                    class=""
+                  />
                 )}
 
                 {service.icon === "tower" && (
-                  <img src="/icons/folder.png" width="96" height="86" alt="" />
+                  <img
+                    src="/icons/folder.png"
+                    width="96"
+                    height="86"
+                    alt=""
+                    class=""
+                  />
                 )}
               </div>
             </article>
