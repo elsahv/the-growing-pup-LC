@@ -37,13 +37,15 @@ const { frontmatter } = Astro.props;
         <div class="bg- grid 2xl:grid-cols-4">
           <div id=" " class="2xl:col-span-2 col-span-1 flex">
             <img
-              class="bg-onyx py-1 pl-1 pr-2 drop-shadow-md border border-black"
+              class="bg- black py-1 pl-1 pr-2 drop-shadow-md border border-black"
               src={frontmatter.aboutImage.url}
               alt=""
             />
           </div>
           <div id="" class="bg- col-span-2 bg- p-5 2xl:ml-3 mt-[55px] text-lg">
-            <div class="bg-carribean text-parchment border border-black p-5">
+            <div
+              class="bg-websiteFocus text-neutralBase1 border border-black p-5"
+            >
               <h2 class="text-3xl font-bold">
                 {frontmatter.aboutTemplate}
               </h2>
@@ -117,7 +119,7 @@ const { frontmatter } = Astro.props;
                   </div> -->
           </div>
         </div>
-        <div id="sq2" class="bg-carribean text-parchment p-">
+        <div id="sq2" class="bg-websiteFocus text-neutralBase1 p-">
           <img src={frontmatter.imgForPagesOffered} alt="" />
         </div>
       </div>
@@ -155,10 +157,10 @@ const { frontmatter } = Astro.props;
                 </li>
               </ul>
 
-              <div class="p-1 mt-5 text-parchment text-lg">
+              <div class="p-1 mt-5 text-neutralBase1 text-lg">
                 <!-- 1ST BTN- "SEE PACKAGE" -->
                 <button
-                  class="dropshadow-lg bg-rosyBrown hover:text-white mr-1 px-2 py-1 dropshadow-md"
+                  class="dropshadow-lg bg- hover:text-white mr-1 px-2 py-1 dropshadow-md"
                 >
                   <a href={frontmatter.clientSiteLink}>see client site</a>
                 </button>
@@ -166,7 +168,7 @@ const { frontmatter } = Astro.props;
                 <!-- 2ND BTN- "CONTACT" -->
 
                 <button
-                  class="dropshadow-lg bg-carribean hover:text-orange ml-1 px-2 py-1 dropshadow-md"
+                  class="dropshadow-lg bg-websiteFocus hover:text-orange ml-1 px-2 py-1 dropshadow-md"
                 >
                   <a href="/#contact">Contact</a>
                 </button>

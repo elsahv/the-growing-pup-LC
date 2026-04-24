@@ -2,7 +2,7 @@ html {
   background: #f0ead2;
   font-family: sans-serif;
   scroll-behavior: smooth;
-  color: #15616D;
+  color: #32292F;
   opacity: 95%;
   font-optical-sizing: auto;
 }
@@ -325,3 +325,17 @@ section {
 #TestBtn {
   border-radius: 5px;
 }
+ 
+
+/* TEST ABOUT CONTENT COLORS */
+/* 
+#rq  #paragraph-container {
+  background: #15616D;
+  color: #7FFFD4;
+  border-radius: 5px;
+}
+#roof  #paragraph-container {
+  background: #15616D;
+  color: #7FFFD4;
+    border-radius: 5px;
+} */

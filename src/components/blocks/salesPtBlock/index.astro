@@ -1,17 +1,23 @@
 ---
 import CenterPageBanner from "../../shared/CenterPageBanner.astro";
-import Gallery from "../aboutBlock/Gallery.astro";
+import ProjectTemplates from "./ProjectTemplates.astro";
 import RoofTestimonial from "../aboutBlock/RoofTestimonial.astro";
 import RQTestimonial from "../aboutBlock/RQTestimonial.astro";
-import ProjectTemplates from "../salesPtBlock/ProjectTemplates.astro";
 ---
 
-<div id="SalesBlock" class="bg-papaya border border-black">
+<div id="SalesBlock" class="bg-papaya border border-black pb-5 mb-5">
   <!-- <Gallery /> -->
-  <RoofTestimonial />
-  <RQTestimonial />
+  <div id="testimonials-wrapper" class="flex justify-center mt-5 pt-5">
+    <div id="testimonials-container" class="pt-5 2xl:w-1/2">
+      <RoofTestimonial />
+      <RQTestimonial />
+    </div>
+  </div>
   <div id="project-templates" class="bg-">
-    <CenterPageBanner BannerTitle="Template Packages" BannerParagraph="Here " />
+    <CenterPageBanner
+      BannerTitle="Template Packages"
+      BannerParagraph="Simple, structured options to get your site live "
+    />
     <ProjectTemplates />
   </div>
 </div>

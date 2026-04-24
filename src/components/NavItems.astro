@@ -2,7 +2,7 @@
 const currentPath = Astro.url.pathname;
 
 const navLinks = [
-  { label: "work process", href: "/#web-development", show: true },
+  { label: "work process", href: "/#how-it-works", show: true },
   { label: "creative templates", href: "/#creative-works", show: true },
   { label: "website packages", href: "/#project-templates", show: true },
   { label: "contact", href: "/#contact", show: true },
@@ -28,7 +28,7 @@ const navLinks = [
                 "rounded-full px-5 2xl:py-0 py-1 transition",
                 currentPath === link.href
                   ? "text-black underline text-2xl"
-                  : "text-carribean text-lg",
+                  : "text- text-lg",
               ]}
             >
               {link.label}

@@ -25,11 +25,11 @@ const ContactForm = () => {
   return (
     <div className=" mt-5 pt-5">
       <div className="ml-3">
-        <h2 className="text-parchment font-semibold text-2xl pl-3 pb-3">
+        <h2 className="text-neutralBase1 font-semibold text-2xl pl-3 pb-3">
           Fill Out Form
         </h2>
       </div>
-      <div className="text-teal bg-papaya   border-2 border-onyx rounded-tl-2xl rounded-bl-2xl 2xl:pl-5 py-5 2xl:ml-5 md:ml-[50px] ml-2 lg:pl-2 pl-5">
+      <div className="text-teal bg-neutralBase2   border-2 border- black rounded-tl-2xl rounded-bl-2xl 2xl:pl-5 py-5 2xl:ml-5 md:ml-[50px] ml-2 lg:pl-2 pl-5">
         <div id="contact" className="mt-1 pt-3 lg:p-5">
           <form
             id="IP-login-form"
@@ -70,7 +70,7 @@ const ContactForm = () => {
               </div>
             </div>
             <div id="btn-wrapper" className="">
-              <button className="rounded bg-onyx text-parchment px-3 py-1 border border-carribean opacity-80 hover:opacity-100">
+              <button className="rounded bg- black text-neutralBase1 px-3 py-1 border border-websiteFocus opacity-80 hover:opacity-100">
                 send
               </button>
             </div>

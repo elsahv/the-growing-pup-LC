@@ -28,28 +28,36 @@ const { title, paragraph1, paragraph2, paragraph3, paragraph4, img } =
                 id="self-img"
                 src={img}
                 alt=""
-                class="lg:p-5 p-2 my-2 sq-styles"
+                class="border border-websiteFocus"
               />
               <!-- <DynamicAboutCTA isLoggedIn={true} username="Address Key Problem" /> -->
               <!-- <DynamicAboutCTA isLoggedIn={false} username="test" /> -->
             </div>
           </div>
-          <div id="sq2" class="pl-5 pt-5 mt-5 bg-">
-            <div class="md:pl-1 pl-3 md:pr-3 pr-1 pt-5">
-              <div id="paragraph-container" class="flex flex-col space-y-4">
-                <h2 class="font-bold text-4xl">{title}</h2>
-                <p>
-                  {paragraph1}
-                </p>
-                <p>
-                  {paragraph2}
-                </p>
-                <p class="">
+          <div class="text- pt-5">
+            <div id="sq2" class="bg- pt-5 mt-5 bg-">
+              <div
+                id="paragraph-container TEST1"
+                class="bg- flex flex-col space-y-4 p-5"
+              >
+                <h2 class="font-bold text-2xl">{title}</h2>
+
+                <div id="paragraph-content" class="text-3xl">
+                  <p>
+                    {paragraph1}
+                  </p>
+                  <br />
+                  <p>
+                    {paragraph2}
+                  </p>
+                </div>
+
+                <!-- <p class="">
                   {paragraph3}
                 </p>
                 <p>
                   {paragraph4}
-                </p>
+                </p> -->
               </div>
               <!-- <ButtonProps btn1="view case study" btn1Link="/" /> -->
             </div>

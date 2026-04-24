@@ -28,12 +28,12 @@ const risingCarnivore = {
 };
 ---
 
-<div id="pricing-section" class="">
+<div id="pricing-section" class="bg-">
   <div id="pricing-container" class="mx-auto max-w-7xl">
     <!-- Header -->
 
     <!-- ?unsure if keeping v -->
-    <!-- <div id="pricing-header" class="bg-test1 mb-12 text-center">
+    <!-- <div id="pricing-header" class="bg- mb-12 text-center">
       <p
         id="pricing-label"
         class="mb-4 text-[11px] font-semibold uppercase tracking-[0.28em] text-neutral-700"
@@ -65,7 +65,7 @@ const risingCarnivore = {
       <!-- Growing Pup -->
       <article
         id="growing-pup-card"
-        class="mt-5 mb-5 relative overflow-hidden rounded-md bg-papaya border border-onyx 2xl:p-10 p-4 shadow-[0_20px_45px_rgba(0,0,0,0.07)]"
+        class="mt-[50px] mb-[55px] relative overflow-hidden rounded-md bg-papaya border border-black 2xl:p-10 p-4 shadow-[0_20px_45px_rgba(0,0,0,0.07)]"
       >
         <div
           id="growing-pup-badge"
@@ -105,7 +105,7 @@ const risingCarnivore = {
 
           <div
             id="growing-pup-price"
-            class="mt-5 inline-flex rounded-full bg-[#e8e1e3] px-4 py-2 text-base text-"
+            class="mt-5 inline-flex rounded-full bg-papaya border border-black px-4 py-2 text-base text-"
           >
             Starting at <span class="ml-1 font-semibold"
               >{growingPup.price}</span
@@ -142,7 +142,7 @@ const risingCarnivore = {
             <a
               id="growing-pup-cta"
               href="#contact"
-              class="mt-8 inline-flex items-center gap-3 rounded-full bg-carribean px-5 py-3 text-base font-medium text-papaya transition hover:opacity-90"
+              class="mt-8 inline-flex items-center gap-3 rounded-full bg-carribean px-5 py-3 text-base font-medium bg-primaryBtn border border-black text-complimentryTextColor transition hover:opacity-90"
             >
               <span class="inline-flex h-4 w-4 rounded-full bg-[#f4bf17]"
               ></span>
@@ -155,7 +155,7 @@ const risingCarnivore = {
       <!-- Rising Carnivore -->
       <article
         id="rising-carnivore-card"
-        class="relative overflow-hidden rounded-lg border border-black bg-carribean 2xl:p-10 p-4 text-papaya shadow-[0_24px_50px_rgba(0,0,0,0.18)]"
+        class="relative overflow-hidden rounded-lg border border-black text-complimentryTextColor bg-websiteFocus 2xl:p-10 p-4 shadow-[0_24px_50px_rgba(0,0,0,0.18)]"
       >
         <div id="rising-carnivore-content" class="mb-8">
           <h3
@@ -174,9 +174,10 @@ const risingCarnivore = {
 
           <div
             id="rising-carnivore-price"
-            class="mt-5 inline-flex rounded-full border border-papaya/20 px-4 py-2 text-base text-papaya/90"
+            class="mt-5 inline-flex rounded-full border border-complimentryTextColor/20 px-4 py-2 text-base text-complimentryTextColor/90"
           >
-            Starting at <span class="ml-1 font-semibold text-papaya"
+            Starting at <span
+              class="ml-1 font-semibold text-complimentryTextColor"
               >{risingCarnivore.price}</span
             >
           </div>
@@ -184,7 +185,7 @@ const risingCarnivore = {
 
         <div
           id="rising-carnivore-features-section"
-          class="border-t border-dashed border-papaya/30 pt-6"
+          class="border-t border-dashed border-complimentryTextColor/30 pt-6"
         >
           <p
             id="rising-carnivore-features-label"
@@ -199,8 +200,8 @@ const risingCarnivore = {
           >
             {
               risingCarnivore.features.map((item) => (
-                <li class="flex items-start gap-3 text-lg text-papaya">
-                  <span class="mt-1 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-papaya/60 text-sm">
+                <li class="flex items-start gap-3 text-lg text-complimentryTextColor">
+                  <span class="mt-1 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-complimentryTextColor/60 text-sm">
                     ✓
                   </span>
                   <span>{item}</span>
@@ -212,7 +213,7 @@ const risingCarnivore = {
           <a
             id="rising-carnivore-cta"
             href="#contact"
-            class="mt-10 inline-flex items-center gap-4 rounded-2xl bg-papaya/10 px-5 py-4 text-lg font-medium text-papaya backdrop-blur transition hover:bg-papaya/15"
+            class="mt-10 inline-flex items-center gap-4 rounded-2xl px-5 py-4 text-lg font-medium bg-primaryBtn text-complimentryTextColor backdrop-blur transition border-2 border-black"
           >
             <span
               class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#ff6a00] text-"
@@ -222,6 +223,12 @@ const risingCarnivore = {
             Build My Site
           </a>
         </div>
+        <p class="pt-5 mt-5">
+          dgdfgd Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Doloremque dolor quis repudiandae. Sequi corporis dolorum eos fuga, id
+          in pariatur a corrupti repudiandae nostrum ducimus! Voluptas harum
+          ipsam et dolor?
+        </p>
 
         <div
           id="rising-carnivore-decor"

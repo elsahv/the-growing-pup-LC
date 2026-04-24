@@ -1,123 +1,38 @@
 ---
 import DynamicGrid from "../../shared/DynamicGrid.astro";
 
-// const items4 = [
-//   {
-//     title: "1.  Share Your Vision",
-//     body: "We start with a conversation about your business, your goals, and what you need your website to do. This sets the foundation for everything that follows.",
-//   },
-//   {
-//     title: "2.  Structure & Direction",
-//     body: "I map out the layout, content flow, and overall direction of your site—focusing on clarity, usability, and how visitors will move through it.",
-//   },
-//   {
-//     title: "3. Design & Build ",
-//     body: "Your site is designed and developed with intention. Each section is built to feel cohesive, easy to navigate, and aligned with your brand.",
-//   },
-//   {
-//     title: "4. Launch & Support",
-//     body: "Once everything is ready, your site goes live. You’ll have a clean, reliable foundation—with guidance on how to manage or grow it over time.",
-//   },
-// ];
-
-const services = [
+const items4 = [
   {
-    title: "1. Share Your Vision",
-    description:
-      "We start with a conversation about your business, your goals, and what you need your website to do. This sets the foundation for everything that follows.",
-    icon: "rocket",
+    title: "1. ONBOARDING PHASE",
+    body: "Client signs up, decides package → Chooses plan + fills out onboarding form: Growing pup or rising carnivore",
   },
   {
-    title: "2. Structure & Direction",
-    description:
-      "I map out the layout, content flow, and overall direction of your site—focusing on clarity, usability, and how visitors will move through it.",
-    icon: "spark",
+    title: "2. DISCOVERY (creative) PHASE",
+    body: "This is where I take the layout and change the code to create a look (css) that fits your business, personality, goals...     sitemap, wireframe site--> mockup first draft--> mockup revised, final draft",
   },
   {
-    title: "3. Design & Build",
-    description:
-      "Your site is designed and developed with intention. Each section is built to feel cohesive, easy to navigate, and aligned with your brand.",
-    icon: "tower",
+    title: "3. DEVELOPMENT PHASE ",
+    body: "set up vercel temp--> convert mockups into code--> go over temp with client --> final revisions. ",
   },
   {
-    title: "4. Launch & Support",
-    description:
-      "Once everything is ready, your site goes live. You’ll have a clean, reliable foundation—with guidance on how to manage or grow it over time.",
-    icon: "rocket",
+    title: "4. LAUNCH PHASE",
+    body: "final review and Q&A--> move local website to live server,hosting,client training--> final payment. set up vercel temp--> convert mockups into code--> go over temp with client --> final revisions",
   },
 ];
 ---
 
-<div id="how-it-works" class="mx-[90px] mt-5 p- bg-">
-  <div id="4-sq-grid-container" class="">
+<div id="how-it-works" class="mt-[90px] ml-[90px] p- bg-">
+  <div id="" class="">
     <div class="pt-3 pb-2">
-      <!-- <h2 class="pl-1 text-2xl underline">How it Works</h2> -->
+      <h2 class="pl-1 text-3xl underline font-bold">How it Works</h2>
       <!-- <p class="text-3xl pt-1">
         This is a step-by-step process on how Laughing Coyote Dev works.
       </p> -->
       <!--  see how I work- to web-development page /web design packages  -->
     </div>
     <!-- TODO: GIVE STEP- BY-STEP GUIDE FROM START TO FINISH, keep in simple to give your client an easy map of how things work form first intereaction with you to end result-->
-
-    <!-- <DynamicGrid items={items4} columns={2} /> -->
-    <section class="py-12">
-      <div class="mx-auto grid max-w-5xl grid-cols-1 gap-6 px-6 md:grid-cols-2">
-        {
-          services.map((service) => (
-            <article class="bg-[#177E8D] text-papaya flex min-h-[200px] items-center justify-between gap-6 rounded-2xl bg- border border-black px-8 py-8 text- shadow-sm">
-              <div class="max-w-sm">
-                <h3 class="text-3xl font-bold leading-tight tracking-tight">
-                  {service.title}
-                </h3>
-
-                <p class="mt-4 text-base leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-
-              <div class="bg-teal-500 rounded-2xl border border-cerulean flex-shrink-0 p-5">
-                {service.icon === "rocket" && (
-                  <img
-                    src="/icons/folder.png"
-                    width="96"
-                    height="86"
-                    alt=""
-                    class=""
-                  />
-                )}
-
-                {service.icon === "spark" && (
-                  <img
-                    src="/icons/folder.png"
-                    width="96"
-                    height="86"
-                    alt=""
-                    class=""
-                  />
-                )}
-
-                {service.icon === "tower" && (
-                  <img
-                    src="/icons/folder.png"
-                    width="96"
-                    height="86"
-                    alt=""
-                    class=""
-                  />
-                )}
-              </div>
-            </article>
-          ))
-        }
-      </div>
-    </section>
+    <div class="text-complimentryTextColor">
+      <DynamicGrid items={items4} columns={4} />
+    </div>
   </div>
 </div>
-<!-- 1. Share Your Vision We start with a conversation about your business, your goals,
-    and what you need your website to do. This sets the foundation for everything that
-    follows. 2. Structure & Direction I map out the layout, content flow, and overall
-    direction of your site—focusing on clarity, usability, and how visitors will move
-    through it. 3. Design & Build Your site is designed and developed with intention.
-    Each section is built to feel cohesive, easy to navigate, and aligned with your brand.
-    4. Launch & Support Once everything is ready, your site goes live. You’ll have a clean,
-    reliable foundation—with guidance on how to manage or grow it over time. -->

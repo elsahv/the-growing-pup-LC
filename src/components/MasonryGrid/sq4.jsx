@@ -30,12 +30,12 @@ const Sq4 = () => {
           <div
             id="templates"
             key={item.title}
-            className=" text-parchment rounded"
+            className=" text-neutralBase1 rounded"
           >
             <img
               src={item.title}
               alt=""
-              className="border border-carribean rounded-lg h-"
+              className="border border-websiteFocus rounded-lg h-"
             />
           </div>
         ))}

@@ -12,15 +12,18 @@ const allCreativeProjects = await Astro.glob("./creativeProjects/*.md");
 <MainLayout>
   <FunnelBlock />
   <AboutBlock />
-  <section id="ContentBlock" class="bg-">
-    <div id="creative-works" class="mt-5">
+  <section
+    id="ContentBlock"
+    class="bg-websiteFocus text-complimentryTextColor border-y-2 border-black"
+  >
+    <div id="creative-works" class="text-">
       <CenterPageBanner
         BannerTitle="Creative Works"
-        BannerParagraph=" web design templates for the creative mind.  I'M TIRED OF GENERIC TEMPLATES!"
+        BannerParagraph="Real sites, experiments, and visual directions"
       />
       <div id="grid" class="grid md:grid-cols-2 grid-cols-1">
         {
-          allCreativeProjects.map((creativeProject) => (
+          allCreativeProjects.map((creativeProject: any) => (
             <ProjectCard
               title={creativeProject.frontmatter.title}
               image={creativeProject.frontmatter.image.url}
