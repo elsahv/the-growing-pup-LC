@@ -1,16 +1,27 @@
 ---
-id: 1
-layout: ../../layouts/PostLayout.astro
-title: "Hovey Roofing"
-websiteNumber: "02"
-pubDate: 1/3/26
-testItem1: "A developer/ story brand writing portfolio. Share the backstory of how the website came into existence. This could include the inspiration behind its creation, the individuals or team involved, and any challenges or obstacles they faced in bringing it to life."
+id: 3
+layout: ../../layouts/CreativeProjectLayout.astro
+creativeProjectTitle: "PS- modernism"
+creativeProjectDesc: "This is where the PS- modernism description goes"
+creativeProjectMainImg:
+  url: "https://dl.dropboxusercontent.com/scl/fi/q14f9bigxyrl4lbq947d9/wtbh-3-26-24.png?rlkey=6s9bv10u0zkfdj63jsaj2sqml&st=3uhiy9p3&dl=0"
+  alt: "The full Astro logo."
+
+creativeProjectMiniScreenshot:
+  url: "https://dl.dropboxusercontent.com/scl/fi/0kaamz8nlz7q1mlzkbjr2/doublepanel-screenshot.jpg?rlkey=zq5l55wn183j3v1220u0qubz7&st=mzkg11zg&dl=0"
+  alt: "The mini Astro logo."
+
+# wtbh will likely go towards eh
+websiteNumber: "03"
+creativeProjectAbout1: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi rem magni doloremque, eos a et hic illum debitis, dicta eligendi temporibus quas sint praesentium ea vitae dignissimos voluptatibus amet iste."
+creativeProjectAbout2: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi rem magni doloremque, eos a et hic illum debitis, dicta eligendi temporibus quas sint praesentium ea vitae dignissimos voluptatibus amet iste."
+creativeProjectAbout3: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi rem magni doloremque, eos a et hic illum debitis, dicta eligendi temporibus quas sint praesentium ea vitae dignissimos voluptatibus amet iste."
+creativeProjectAbout4: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi rem magni doloremque, eos a et hic illum debitis, dicta eligendi temporibus quas sint praesentium ea vitae dignissimos voluptatibus amet iste."
+
 category1: "category1"
 category2: "category2"
-author: "Astro Learner"
-image:
-  url: "https://dl.dropboxusercontent.com/scl/fi/2qjwjdw2djppjpcqnbqkv/hovroof1.jpg?rlkey=04pj0osakfmuzs8uy1hybmk0z&st=363oyc0d&dl=0
-"
+lastCreativeProjectImg:
+  url: "https://dl.dropboxusercontent.com/scl/fi/q14f9bigxyrl4lbq947d9/wtbh-3-26-24.png?rlkey=6s9bv10u0zkfdj63jsaj2sqml&st=3uhiy9p3&dl=0"
   alt: "The full Astro logo."
 websiteUrl: "https://elsahovey.com"
 githubUrl: "https://github.com/elsahv/-the-running-quail"
@@ -29,5 +40,4 @@ tags: ["astro", "blogging", "learning in public"]
 
 Share the backstory of how the website came into existence. This could include the inspiration behind its creation, the individuals or team involved, and any challenges or obstacles they faced in bringing it to life.
 <br><br>
-
-#palm springs- inspired modernism
+#out of this world

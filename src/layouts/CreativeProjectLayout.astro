@@ -1,0 +1,124 @@
+---
+import MainLayout from "./MainLayout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<MainLayout>
+  <div
+    id="teal-creativeProject-banner"
+    class="bg-websiteFocus text-complimentryTextColor border-y-2 border-black flex justify-center pb-5 mb-5"
+  >
+    <div id="" class="w-3/4 mt-5 pt-5 text-lg p-">
+      <div class="flex">
+        <div class="my-5 p-5 font-semibold opacity-80 text- black">
+          <h2 id="creativeProject-title" class="text-6xl">
+            {frontmatter.creativeProjectTitle}
+          </h2>
+          <p id="creativeProject-description" class="opacity-80 text-lg mt-5">
+            {frontmatter.creativeProjectDesc}
+          </p>
+        </div>
+
+        <div id="creativeProject-mainImgcontainer" class="flex justify-end">
+          <img
+            id="main-img"
+            src={frontmatter.creativeProjectMainImg.url}
+            alt={frontmatter.creativeProjectMainImg.alt}
+            class="my-5 border-2 border-black rounded-sm"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="wrapper" class="flex justify-center pt-5 mt-5">
+    <div id="container" class="mt-5 pt-5 w-3/4 max-w-7xl">
+      <div id="grid" class="grid grid-cols-3 gap-5">
+        <div id="sq1" class="bg- col-span-1">
+          <img
+            id="mini-img-screenshot"
+            src={frontmatter.creativeProjectMiniScreenshot.url}
+            alt={frontmatter.creativeProjectMiniScreenshot.alt}
+            class="h- border-black border-r mt-5 sq-styles bg-"
+          />
+        </div>
+        <div id="sq2" class="bg- col-span-2">
+          <div class="text-websiteFocus mb-5 p-5 flex flex-col gap-y-5">
+            <h2 id="about-title" class="text-4xl font-semibold">About</h2>
+            <p id="about-content1" class="">
+              {frontmatter.creativeProjectAbout1}
+            </p>
+
+            <p id="about-content2" class="text-">
+              {frontmatter.creativeProjectAbout2}
+            </p>
+
+            <p id="about-content3" class="">
+              {frontmatter.creativeProjectAbout3}
+            </p>
+            <br />
+            <p id="about-content4">
+              {frontmatter.creativeProjectAbout4}
+            </p>
+          </div>
+          <img
+            id="last-creativeProject-img (CTA)"
+            src={frontmatter.lastCreativeProjectImg.url}
+            alt={frontmatter.lastCreativeProjectImg.alt}
+            class="sq-styles bg-"
+          />
+          <div class="mt-1 ml-1 mb-[55px] bg-">
+            <!-- TODO: Lean Into Your Desert Identity (Signature Niche) V-->
+            <!--  * 🔥 Strong Positioning Tagline Styles, Clear + Confident (Best for freelance clients) These are simple and effective. -->
+            <!-- ? POTENTIAL TAGLINESv-->
+            <!-- 1.  Design-forward websites for bold, modern brands. 
+              2.Strategic web design with personality. 
+              3. Art-directed web design for creative businesses.  
+              4. Retro-modern web design with warmth and edge, desert-inspired design. 
+              5. Websites that turn desert personality into presence.
+              6.  Elevated websites for growing brands. Standout design for brands ready to be taken seriously.
+              7.  Boutique web design with distinct art direction.
+              8. Art-directed web design with warmth and structure. 
+              9. Modern web design with personality and purpose. 
+              10. Web design shaped by California’s light, color, and architecture.
+              11. Distinct web experiences inspired by CaliforniaN DESERT landscapes.  -->
+            <!-- ? ^-->
+            <!-- <div
+              id="CONTENT IS UNDECIDED"
+              class="bg-websiteFocus text-complimentryTextColor p-2 mt-5 text-lg"
+            >
+              <h3>
+                🎯 I focus on boutique web design with distinct art direction.
+                Even for people not located in the desert, buyers include:
+              </h3>
+              <br />
+              <ul>
+                <li>Creative professionals</li>
+                <li>designers</li>
+                <li>photographers</li>
+                <li>artists</li>
+                <li>web developers</li>
+                <li>copywriters</li>
+                <li>agencies</li>
+                <li>personal brands</li>
+                <li>those who want a distinctive visual identity</li>
+              </ul>
+            </div> -->
+            <!-- TODO: ^^^ ^-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    id="creative-project-slot-wrapper"
+    class="text-websiteFocus flex justify-end"
+  >
+    <div
+      id="creative-project-slot-container"
+      class="bg- w-2/3 pl-[120px] pr-[250px]"
+    >
+      <slot />
+    </div>
+  </div>
+</MainLayout>

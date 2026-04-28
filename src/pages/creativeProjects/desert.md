@@ -1,14 +1,31 @@
 ---
-id: 1
-layout: ../../layouts/PostLayout.astro
-title: "Creative Projects"
-websiteNumber: "01"
-pubDate: 12/24/25
-testItem1: "A developer/ story brand writing portfolio. Share the backstory of how the website came into existence. This could include the inspiration behind its creation, the individuals or team involved, and any challenges or obstacles they faced in bringing it to life."
+id: 3
+layout: ../../layouts/CreativeProjectLayout.astro
+creativeProjectTitle: "Desert Color Inspirations"
+creativeProjectDesc: "This is where the Desert-Color-Inspirations description goes"
+
+creativeProjectMainImg:
+  url: "https://dl.dropboxusercontent.com/scl/fi/0kaamz8nlz7q1mlzkbjr2/doublepanel-screenshot.jpg?rlkey=zq5l55wn183j3v1220u0qubz7&st=mzkg11zg&dl=0"
+  alt: "The full Astro logo."
+
+image:
+  url: "https://dl.dropboxusercontent.com/scl/fi/0kaamz8nlz7q1mlzkbjr2/doublepanel-screenshot.jpg?rlkey=zq5l55wn183j3v1220u0qubz7&st=mzkg11zg&dl=0"
+  alt: "The full Astro logo."
+
+creativeProjectMiniScreenshot:
+  url: "https://images.pexels.com/photos/8979737/pexels-photo-8979737.jpeg?_gl=1*4xez03*_ga*MTA5MDE3MzI2MS4xNzU4MjUwMDM4*_ga_8JE65Q40S6*czE3NzczNDU4MzAkbzQ5JGcxJHQxNzc3MzQ1ODU2JGozNCRsMCRoMA.."
+  alt: "The mini Astro logo."
+
+# wtbh will likely go towards eh
+websiteNumber: "03"
+creativeProjectAbout1: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi rem magni doloremque, eos a et hic illum debitis, dicta eligendi temporibus quas sint praesentium ea vitae dignissimos voluptatibus amet iste."
+creativeProjectAbout2: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi rem magni doloremque, eos a et hic illum debitis, dicta eligendi temporibus quas sint praesentium ea vitae dignissimos voluptatibus amet iste."
+creativeProjectAbout3: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi rem magni doloremque, eos a et hic illum debitis, dicta eligendi temporibus quas sint praesentium ea vitae dignissimos voluptatibus amet iste."
+creativeProjectAbout4: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi rem magni doloremque, eos a et hic illum debitis, dicta eligendi temporibus quas sint praesentium ea vitae dignissimos voluptatibus amet iste."
+
 category1: "category1"
 category2: "category2"
-author: "Astro Learner"
-image:
+lastCreativeProjectImg:
   url: "https://dl.dropboxusercontent.com/scl/fi/0kaamz8nlz7q1mlzkbjr2/doublepanel-screenshot.jpg?rlkey=zq5l55wn183j3v1220u0qubz7&st=mzkg11zg&dl=0"
   alt: "The full Astro logo."
 websiteUrl: "https://elsahovey.com"
@@ -28,5 +45,4 @@ tags: ["astro", "blogging", "learning in public"]
 
 Share the backstory of how the website came into existence. This could include the inspiration behind its creation, the individuals or team involved, and any challenges or obstacles they faced in bringing it to life.
 <br><br>
-
-#Desert color inspirations
+#out of this world

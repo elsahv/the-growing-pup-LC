@@ -1,8 +1,8 @@
 ---
 const frontmatter = Astro.props;
 const {
-  title,
-  image,
+  creativeProjectTitle,
+  creativeProjectMainImg,
   alt,
   url,
   testItem1,
@@ -15,9 +15,9 @@ const {
 <div id="sq" class="opacity-70 hover:opacity-100 px-5 mt-5 pt-3">
   <a href={url}>
     <!-- <div>{websiteNumber}.</div> -->
-    <!-- <h2 class="ml-3 text-3xl">{title}</h2> -->
+    <h2 class="ml-3 text-3xl">{creativeProjectTitle}</h2>
     <img
-      src={image}
+      src={creativeProjectMainImg}
       class="drop-shadow-xl rounded border-2 border-black my-1"
       alt={alt}
     />

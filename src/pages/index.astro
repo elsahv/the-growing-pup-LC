@@ -12,6 +12,7 @@ const allCreativeProjects = await Astro.glob("./creativeProjects/*.md");
 <MainLayout>
   <FunnelBlock />
   <AboutBlock />
+
   <section
     id="ContentBlock"
     class="bg-websiteFocus text-complimentryTextColor border-y-2 border-black"
@@ -25,9 +26,12 @@ const allCreativeProjects = await Astro.glob("./creativeProjects/*.md");
         {
           allCreativeProjects.map((creativeProject: any) => (
             <ProjectCard
-              title={creativeProject.frontmatter.title}
-              image={creativeProject.frontmatter.image.url}
-              alt={creativeProject.frontmatter.image.alt}
+              creativeProjectTitle={
+                creativeProject.frontmatter.creativeProjectTitle
+              }
+              creativeProjectMainImg={
+                creativeProject.frontmatter.creativeProjectMainImg.url
+              }
               url={creativeProject.url}
               testItem1={creativeProject.frontmatter.testItem1}
               websiteNumber={creativeProject.frontmatter.websiteNumber}
