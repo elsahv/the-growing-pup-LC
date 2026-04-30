@@ -53,7 +53,7 @@ const allWorkProjects = await Astro.glob("./workProjects/*.md");
             image={work.frontmatter.image.url}
             alt={work.frontmatter.image.alt}
             url={work.url}
-            creativeProjectAbout1={work.frontmatter.creativeProjectAbout1}
+            productDescription={work.frontmatter.productDescription}
             websiteNumber={work.frontmatter.websiteNumber}
           />
         ))
