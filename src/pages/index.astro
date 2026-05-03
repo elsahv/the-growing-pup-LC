@@ -15,14 +15,14 @@ const allCreativeProjects = await Astro.glob("./creativeProjects/*.md");
 
   <section
     id="ContentBlock"
-    class="bg-websiteFocus text-complimentryTextColor border-y-2 border-black"
+    class="flex justify-center bg-websiteFocus text-complimentryTextColor border-y-2 border-black"
   >
-    <div id="creative-works" class="text-">
+    <div id="creative-works" class="w-3/4">
       <CenterPageBanner
-        BannerTitle="Creative Works"
+        BannerTitle="Featured Sites"
         BannerParagraph="Real sites, experiments, and visual directions"
       />
-      <div id="grid" class="grid md:grid-cols-2 grid-cols-1">
+      <div id="grid" class="grid md:grid-cols-2 grid-cols-1 p-5 m-5">
         {
           allCreativeProjects.map((creativeProject: any) => (
             <ProjectCard

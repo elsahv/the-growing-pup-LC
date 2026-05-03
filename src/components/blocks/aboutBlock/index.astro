@@ -6,33 +6,22 @@ import HowItWorks from "./HowItWorks.astro";
 import WhatsIncluded from "./WhatsIncluded.astro";
 import TestImg from "../../../images/aboutComputer.jpg";
 import TestImg2 from "../../../images/self2.jpg";
+import AboutLC from "../funnelBlock/AboutLC.astro";
+import TestCreative1 from "../../TestCreative1.jsx";
 ---
 
-<div id="AboutBlock" class="bg-papaya border-y-2 border-websiteFocus">
-  <div id="about-me-blurb"></div>
-  <HowItWorks />
+<div id="AboutBlock" class="bg- border-y-2 border-test1">
+  <!-- <HowItWorks /> -->
+  <!-- TODO: TEMPLATES GALLERY HERE V -->
+  <TestCreative1 />
+
+  <!-- TODO: TEMPLATES GALLERY HERE ^ -->
   <!-- <WhatsIncluded /> -->
-
-  <!-- *NEW CONTENT 4 v-->
-  Local businesses want fast, on-brand sites. Templates save them 50–70% in cost.
-
-  <!-- *NEW CONTENT 5 v-->
-  I don’t just sell “Palm Springs templates,” I sell “websites for desert-style businesses.”
-  That framing changes everything. I'm a designer who builds desert/lifestyle aesthetic
-  sites.
-
-  <!-- *NEW CONTENT 8 v-->
-  Elevated + Strategic California-inspired web design for modern brands. Web design
-  shaped by California’s light, color, and architecture. Design-forward websites rooted
-  in California modernism. Distinct web experiences inspired by California landscapes.
-  Design-led websites influenced by California architecture and color. If you want
-  to lean into location credibility You can reference a specific place like Palm Springs
-  indirectly in your portfolio case studies, not necessarily your main tagline.
-
-  <!-- TODO: NEW PICTURE GRID V-->
 
   <div id="wrapper" class="bg- flex justify-center pt-5 mt-5">
     <div id="container" class="mt-5 pt-5 w-3/4 max-w-7xl">
+      <AboutLC />
+
       <div id="grid" class="grid grid-cols-3 gap-5">
         <div id="sq1" class="bg- col-span-1">
           <Image
@@ -43,7 +32,7 @@ import TestImg2 from "../../../images/self2.jpg";
         </div>
         <div id="sq2" class="bg- col-span-2">
           <div class="mb-5 p-5">
-            <h2 class="text-4xl">About</h2>
+            <h2 class="text-4xl">About Me</h2>
             <!-- * NEW CONTENT 1  v-->
             <p>
               “designer specializing in retro-modern desert minimal web
@@ -126,5 +115,5 @@ import TestImg2 from "../../../images/self2.jpg";
       </div>
     </div>
   </div>
-  <!-- TODO: NEW PICTURE GRID ^-->
 </div>
+<!-- TODO: NEW PICTURE GRID ^-->

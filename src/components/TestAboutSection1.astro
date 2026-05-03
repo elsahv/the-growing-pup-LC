@@ -1,0 +1,65 @@
+---
+import ButtonProps from "./shared/ButtonProps.astro";
+import Dynamic from "./Dynamic.jsx";
+
+export interface Props {
+  title: string;
+  paragraph1: string;
+  paragraph2: string;
+  paragraph3: string;
+  paragraph4: string;
+}
+
+const { title, paragraph1, paragraph2, paragraph3, paragraph4 } =
+  Astro.props as Props;
+---
+
+<div id="" class="bg- py-5 my-5">
+  <div id="PROBLEM-SOLVING-wrapper" class="py-5">
+    <div id="container" class="bg- 2xl:mx-0 md:mx-[50px] mx-5">
+      <div id="about-me-grid" class="grid md:grid-cols-2 grid-cols-1 gap-1">
+        <div id="sq1" class="flex md:justify-end justify-center">
+          <div
+            id="sq1-container"
+            class="2xl:w-1/2 w-full flex lg:justify-end justify-center items-end"
+          >
+            <Dynamic isLoggedIn={false} username="Address Key Problem" />
+          </div>
+        </div>
+        <div id="sq2" class="bg- row-span-2">
+          <!-- right img v -->
+          <img
+            id="self-img"
+            src="https://images.pexels.com/photos/6238100/pexels-photo-6238100.jpeg?_gl=1*1xn3ay6*_ga*MTA5MDE3MzI2MS4xNzU4MjUwMDM4*_ga_8JE65Q40S6*czE3Nzc2NzM2MjQkbzU4JGcxJHQxNzc3NjczNjQ1JGozOSRsMCRoMA.."
+            alt=""
+            class="sq-styles bg- lg:p-5 p-2 2xl:w-[450px] my-2 sq-styles"
+          />
+        </div>
+
+        <div id="sq3" class="bg- flex 2xl:justify-end">
+          <div class="2xl:w-1/2 w-full md:pl-1 pl-3 md:pr-3 pr-1 pt-5">
+            <h2 class="font-bold text-3xl pb-2">{title}</h2>
+            <p>
+              {paragraph1}<p>
+                <p>
+                  {paragraph2}
+                </p>
+                <p class="py-1 mb-2">
+                  {paragraph3}
+                </p>
+                <p>
+                  {paragraph4}
+                </p>
+              </p>
+
+              <ButtonProps
+                btn1="view LC templates"
+                btn1Link="/#view-AboutSection2"
+              />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
