@@ -6,58 +6,40 @@ import SelfImg from "../../images/self.jpg";
 
 export interface Props {
   title: string;
-  paragraph1: string;
-  paragraph2: string;
-  paragraph3: string;
-  paragraph4: string;
+  paragraph: string;
   img: string;
 }
 
-const { title, paragraph1, paragraph2, paragraph3, paragraph4, img } =
-  Astro.props as Props;
+const { title, paragraph, img } = Astro.props as Props;
 ---
 
-<div class="flex justify-center bg-">
+<div class="bg- flex justify-center bg-">
   <div id="" class="max-w-[1100px]">
     <div id="PROBLEM-SOLVING-wrapper" class="py-">
       <div id="container" class="bg-test">
-        <div id="flex-TEST" class="flex lg:flex-row flex-col">
-          <div id="sq1" class="mt-5">
-            <div id="sq1-container" class="mt-5">
+        <div id="flex-TEST" class="bg- flex 2xl:flex-row flex-col-reverse">
+          <div id="sq1" class="lg:mt-5">
+            <div id="sq1-container" class="lg:mt-5">
               <img
                 id="self-img"
                 src={img}
                 alt=""
-                class="border border-websiteFocus"
+                class="border border-black rounded"
               />
               <!-- <DynamicAboutCTA isLoggedIn={true} username="Address Key Problem" /> -->
               <!-- <DynamicAboutCTA isLoggedIn={false} username="test" /> -->
             </div>
           </div>
-          <div class="text- pt-5">
-            <div id="sq2" class="bg- pt-5 mt-5 bg-">
-              <div
-                id="paragraph-container TEST1"
-                class="bg- flex flex-col space-y-4 p-5"
-              >
+          <div class="bg- mt-5 pt-5">
+            <div id="sq2" class="lg:mx-2 lg:my-5 lg:px-2">
+              <div id="paragraph-container " class="lg:pt-5">
                 <h2 class="font-bold text-2xl">{title}</h2>
 
-                <div id="paragraph-content" class="text-3xl">
+                <div id="paragraph-content" class="text-3xl pt-">
                   <p>
-                    {paragraph1}
-                  </p>
-                  <br />
-                  <p>
-                    {paragraph2}
+                    {paragraph}
                   </p>
                 </div>
-
-                <!-- <p class="">
-                  {paragraph3}
-                </p>
-                <p>
-                  {paragraph4}
-                </p> -->
               </div>
               <!-- <ButtonProps btn1="view case study" btn1Link="/" /> -->
             </div>

@@ -1,102 +1,20 @@
 ---
+import CenterPageBanner from "../components/shared/CenterPageBanner.astro";
+import ProjectCard from "../components/shared/ProjectCard.astro";
+import SplitShowcase from "../components/SplitShowCase.astro";
+import TestClientSuccess from "../components/TestClientSuccess.astro";
+import TestFeaturedSite from "../components/TestFeaturedSite.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-// PopularRail.astro
-const articles = [
-  {
-    type: "inspired by",
-    date: "Palm Springs",
-    title: "modern abstract",
-    tags: ["CSS FUNCTIONS", "HTML ELEMENTS"],
-    author: "Patrick Brosset",
-    avatar: "https://i.pravatar.cc/80?img=12",
-  },
-  {
-    type: "desert colors",
-    date: "Mar 23, 2026",
-    title: "desert colors",
-    tags: ["ANIMATION", "SCROLL-DRIVEN ANIMATION"],
-    author: "Daniel Schwarz",
-    avatar: "https://i.pravatar.cc/80?img=32",
-  },
-  {
-    type: "Article",
-    date: "Mar 19, 2026",
-    title: "terracotta theme",
-    tags: ["DESTRUCTURING", "JAVASCRIPT"],
-    author: "Mat Marquis",
-    avatar: "https://i.pravatar.cc/80?img=56",
-  },
-  {
-    type: "Article",
-    date: "Feb 26, 2026",
-    title: "mb weirdness",
-    tags: ["NEWS", "SECURITY"],
-    author: "Lee Meyer",
-    avatar: "https://i.pravatar.cc/80?img=14",
-  },
-];
+
+const creativeProjects = await Astro.glob("./creativeProjects/*.md");
 ---
 
 <MainLayout>
-  <section class="bg-test1 px-8 py-10 text-white">
-    <div class="flex gap-8 overflow-x-auto pb-8">
-      <!-- Feature card -->
-      <article
-        class="relative flex min-h-[360px] min-w-[260px] flex-col justify-end rounded-xl bg-black p-7"
-      >
-        <div
-          class="absolute inset-0 rounded-xl bg-gradient-to-br from-orange-500 via-pink-600 to-cyan-400 p-1"
-        >
-          <div class="h-full w-full rounded-lg bg-black"></div>
-        </div>
-
-        <div class="relative z-10">
-          <h2 class="mb-8 text-4xl font-extrabold leading-tight">
-            Creative<br />Templates<br />
-          </h2>
-
-          <p class="font-serif text-lg">Powered by</p>
-          <a href="#" class="mt-2 block font-serif text-lg text-cyan-400">
-            Astro and tailwind
-          </a>
-        </div>
-      </article>
-
-      <!-- Article cards -->
-      {
-        articles.map((article) => (
-          <article class="min-h-[300px] min-w-[260px] rounded-2xl bg-[#3c3c3c] p-7 shadow-2xl transition hover:-translate-y-2 hover:bg-[#464646]">
-            <p class="mb-2 font-serif text-lg font-bold text-white">
-              {article.type}
-              <span class="font-normal text-zinc-500"> on {article.date}</span>
-            </p>
-
-            <h3 class="mb-6 text-2xl font-extrabold leading-tight">
-              {article.title}
-            </h3>
-
-            <div class="mb-8 flex flex-wrap gap-x-5 gap-y-2">
-              {article.tags.map((tag) => (
-                <a
-                  href="#"
-                  class="text-xs font-black uppercase text-orange-500"
-                >
-                  {tag}
-                </a>
-              ))}
-            </div>
-
-            <div class="flex items-center gap-3">
-              <img
-                src={article.avatar}
-                alt=""
-                class="h-10 w-10 rounded-full object-cover"
-              />
-              <p class="font-serif text-lg font-bold">{article.author}</p>
-            </div>
-          </article>
-        ))
-      }
-    </div>
-  </section>
+  <SplitShowcase
+    title="title"
+    paragraph1="dkldsjfdl dkldsjfdl dkldsjfdl dkldsjfdl dkldsjfdl"
+    paragraph2="dkldsjfdl dkldsjfdl dkldsjfdl dkldsjfdl dkldsjfdl"
+    paragraph3="dkldsjfdl dkldsjfdl dkldsjfdl dkldsjfdl dkldsjfdl"
+    paragraph4="dkldsjfdl dkldsjfdl dkldsjfdl dkldsjfdl dkldsjfdl"
+  />
 </MainLayout>

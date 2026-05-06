@@ -1,5 +1,4 @@
 ---
-import AboutCTA from "../sections/AboutCTA.astro";
 import CenterPageBanner from "../shared/CenterPageBanner.astro";
 
 interface Props {
@@ -23,7 +22,7 @@ const {
 } = Astro.props;
 ---
 
-<section id="contact-block" class="">
+<section id="contact-block" class="border border-black">
   <div id="contact">
     <CenterPageBanner
       BannerTitle="Get in Touch"
@@ -43,7 +42,7 @@ const {
 
           <div class="pr-[50px] flex flex-col gap-8 bg-">
             <div
-              class="grid gap-8 border-b border-black/15 pb-8 md:grid-cols-[1.2fr_1fr]"
+              class="grid gap-8 border-b border-websiteFocus pb-8 md:grid-cols-[1.2fr_1fr]"
             >
               <div>
                 <p class="mb-4 font-serif text-lg font-semibold">
@@ -121,7 +120,7 @@ const {
                       name="firstName"
                       type="text"
                       required
-                      class="w-full border border-black/15 bg-transparent px-4 py-3 outline-none transition focus:border-black"
+                      class="w-full border border-websiteFocus bg-transparent px-4 py-3 outline-none transition focus:border-black"
                     />
                   </div>
 
@@ -137,7 +136,7 @@ const {
                       name="lastName"
                       type="text"
                       required
-                      class="w-full border border-black/15 bg-transparent px-4 py-3 outline-none transition focus:border-black"
+                      class="w-full border border-websiteFocus bg-transparent px-4 py-3 outline-none transition focus:border-black"
                     />
                   </div>
                 </div>
@@ -156,7 +155,7 @@ const {
                   name="email"
                   type="email"
                   required
-                  class="w-full border border-black/15 bg-transparent px-4 py-3 outline-none transition focus:border-black"
+                  class="w-full border border-websiteFocus bg-transparent px-4 py-3 outline-none transition focus:border-black"
                 />
               </div>
 
@@ -173,7 +172,7 @@ const {
                   name="message"
                   rows="5"
                   required
-                  class="w-full resize-none border border-black/15 bg-transparent px-4 py-3 outline-none transition focus:border-black"
+                  class="w-full resize-none border border-websiteFocus bg-transparent px-4 py-3 outline-none transition focus:border-black"
                 ></textarea>
               </div>
 
@@ -188,7 +187,5 @@ const {
         </div>
       </div>
     </section>
-
-    <!-- <AboutCTA /> -->
   </div>
 </section>

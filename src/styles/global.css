@@ -15,7 +15,7 @@ html {
 }
 
 p {
-  font-size: 19px;  
+  font-size: 18px;  
 }
  
 section {
@@ -38,7 +38,16 @@ section {
 }
  
  
+/* src/styles/global.css */
 
+.horizontal-scroll {
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+}
+
+.horizontal-scroll > * > article {
+  scroll-snap-align: start;
+}
 
 
 
@@ -282,8 +291,8 @@ section {
 
 #web-dev-intro2  #flex-TEST {
   flex-direction: row-reverse;
-    @media (max-width: 800px) {
-      flex-direction: column;
+    @media (max-width: 600px) {
+      flex-direction: column-reverse;
     }
 }
 

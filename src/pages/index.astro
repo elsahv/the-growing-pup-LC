@@ -1,25 +1,71 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import CenterPageBanner from "../components/shared/CenterPageBanner.astro";
 import ContactBlock from "../components/blocks/ContactBlock.astro";
-import SalesPtBlock from "../components/blocks/salesPtBlock/index.astro";
+import SalesOfferBlock from "../components/blocks/salesOfferBlock/index.astro";
 import FunnelBlock from "../components/blocks/funnelBlock/index.astro";
 import AboutBlock from "../components/blocks/aboutBlock/index.astro";
 import ProjectCard from "../components/shared/ProjectCard.astro";
-const allCreativeProjects = await Astro.glob("./creativeProjects/*.md");
+import HeroBlock from "../components/blocks/HeroBlock.astro";
+import TestimonialsBlock from "../components/blocks/TestimonialsBlock.astro";
+// import TestFeaturedSite from "../components/TestFeaturedSite.astro";
+const creativeProjects = await Astro.glob("./creativeProjects/*.md");
 ---
 
 <MainLayout>
-  <FunnelBlock />
-  <AboutBlock />
+  <HeroBlock />
+  <!--? UNSURE WHAT TO DO WITH THIS SECTION. JUST LIKE THE LOOK v -->
+  <!-- ?<TestFeaturedSite title="title" /> -->
+  <!--? UNSURE WHAT TO DO WITH THIS SECTION. JUST LIKE THE LOOK ^  -->
 
+  <FunnelBlock />
+
+  <TestimonialsBlock />
   <section
-    id="ContentBlock"
+    id="NEW- Proof Block "
+    class="flex justify-end border-y-2 border-black bg-websiteFocus text-complimentryTextColor py-24"
+  >
+    <div id="creative-works" class="bg-">
+      <p class="mb-12 text-sm font-bold uppercase tracking-wide">
+        Selected Client Success Stories
+      </p>
+      <div id="grid" class="grid 2xl:grid-cols-3 grid-cols-2">
+        {
+          creativeProjects.map((creativeProject: any) => (
+            <ProjectCard
+              creativeProjectTitle={
+                creativeProject.frontmatter.creativeProjectTitle
+              }
+              creativeProjectDesc={
+                creativeProject.frontmatter.creativeProjectDesc
+              }
+              creativeProjectMainImg={
+                creativeProject.frontmatter.creativeProjectMainImg.url
+              }
+              creativeTest={creativeProject.frontmatter.creativeTest}
+              url={creativeProject.url}
+              testItem1={creativeProject.frontmatter.testItem1}
+              websiteNumber={creativeProject.frontmatter.websiteNumber}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- <TestClientSuccess /> -->
+
+  <!-- *THIS LOOKS GOOD TOO, USE FOR SOMETHING! V -->
+  <!-- <TestFeaturedSite title="What I Build:" /> -->
+  <!-- *THIS LOOKS GOOD TOO, USE FOR SOMETHING! ^ -->
+
+  <!-- : USE TO ELABORATE ON CONTENT, I LIKE THIS, DON'T REMOVE! V -->
+  <!-- <section
+    id="NEW- Proof Block"
     class="flex justify-center bg-websiteFocus text-complimentryTextColor border-y-2 border-black"
   >
     <div id="creative-works" class="w-3/4">
       <CenterPageBanner
-        BannerTitle="Featured Sites"
+        BannerTitle="Featured Works"
         BannerParagraph="Real sites, experiments, and visual directions"
       />
       <div id="grid" class="grid md:grid-cols-2 grid-cols-1 p-5 m-5">
@@ -40,7 +86,10 @@ const allCreativeProjects = await Astro.glob("./creativeProjects/*.md");
         }
       </div>
     </div>
-  </section>
-  <SalesPtBlock />
+  </section> -->
+  <!-- TODO: USE TO ELABORATE ON CONTENT, I LIKE THIS, DON'T REMOVE! ^-->
+
+  <SalesOfferBlock />
+  <AboutBlock />
   <ContactBlock />
 </MainLayout>

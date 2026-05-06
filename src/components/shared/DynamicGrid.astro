@@ -36,22 +36,23 @@ const autoFitStyle = !columns
   : "";
 ---
 
-<section class:list={["grid gap-6", gridCols, className]} style={autoFitStyle}>
+<section
+  class:list={["grid gap-6 bg-", gridCols, className]}
+  style={autoFitStyle}
+>
   {
     items.map((item) => (
       <article
         id="sq"
         class:list={[
-          " flex min-h-[220px] flex-col justify-between border-2 border-black bg-websiteFocus p-5 ",
+          "border-2  border-black rounded flex min-h-[220px] flex-col justify-between  bg- p-5 ",
           cardClassName,
         ]}
       >
         <div class="">
-          <h3 class="mb-3  font-semibold leading-tight text-xl">
-            {item.title}
-          </h3>
+          <h3 class="mb  bg- font-bold leading-tight text-xl">{item.title}</h3>
 
-          <p class="text- text-md leading-relaxed">{item.body}</p>
+          <p class="bg- pl-2 text-md leading-relaxed ">{item.body}</p>
         </div>
 
         {item.href && (

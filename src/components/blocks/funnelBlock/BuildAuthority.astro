@@ -1,34 +1,23 @@
 ---
-import TestAboutSection1 from "../../TestAboutSection1.astro";
-
-const items2 = [
-  {
-    title: "1. modern abstract",
-    body: "Client signs up, decides package → Chooses plan + fills out onboarding form: Growing pup or rising carnivore",
-  },
-  {
-    title: "2. desert colors",
-    body: "This is where I take the layout and change the code to create a look (css) that fits your business, personality, goals...     sitemap, wireframe site--> mockup first draft--> mockup revised, final draft",
-  },
-  {
-    title: "3. terracotta theme",
-    body: "set up vercel temp--> convert mockups into code--> go over temp with client --> final revisions. ",
-  },
-  {
-    title: "4. mb weirdness",
-    body: "final review and Q&A--> move local website to live server,hosting,client train   ing--> final payment. set up vercel temp--> convert mockups into code--> go over temp with client --> final revisions",
-  },
-];
+import SplitShowCase from "../../SplitShowCase.astro";
 ---
 
-<section id="buildAuthority-section" class="2xl:mx-5 mt-5 2xl:px-5 bg-">
-  <!-- TODO: 5/1/26- THIS IS THE NEW BUILD AUTHORITY SECTION WHICH SHOWS FEATURED CASE STUDY OF ALL 4 TEMPLATES V-->
-  <TestAboutSection1
-    title="Pain Points to Address:"
-    paragraph1="ADDRESS KEY PROBLEM: Do you have DIY burnout? Are you stuck trying to build your website without a clear plan? "
-    paragraph2="You have something “good enough,” but you’re not proud to send people to it. "
-    paragraph3="You know you’re capable of more, but your website doesn’t reflect that. When someone asks for your link, you hesitate—because it doesn’t feel like you yet. "
-    paragraph4="I can relate to that... That’s what allows me to build websites that feel human, approachable, and slightly unconventional—without losing professionalism. "
-  />
-  <!-- TODO: 5/1/26- THIS IS THE NEW BUILD AUTHORITY SECTION WHICH SHOWS FEATURED CASE STUDY OF ALL 4 TEMPLATES ^-->
+<section
+  id="buildAuthority-wrapper"
+  class="flex justify-center md:mx-5 mt-5 2xl:px-5 bg-"
+>
+  <div id="container" class="px-5 w-full">
+    <SplitShowCase
+      title="Pain Points to Address:"
+      paragraph1="ADDRESS KEY PROBLEM: Do you have DIY burnout? Are you stuck trying to build your website without a clear plan? "
+      paragraph2="You have something “good enough,” but you’re not proud to send people to it. "
+      paragraph3="You know you’re capable of more, but your website doesn’t reflect that. When someone asks for your link, you hesitate—because it doesn’t feel like you yet. "
+      paragraph4=" "
+    />
+  </div>
 </section>
+<!-- <p>
+  I can relate to that... That’s what allows me to build websites that feel
+  human, approachable, and slightly unconventional—without losing
+  professionalism.
+</p> -->

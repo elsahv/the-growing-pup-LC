@@ -1,0 +1,50 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+
+<section id="about">
+  <section
+    id=""
+    class="bg-websiteFocus text-parchment text-2xl border-t-4 border-b-4 border-black mt-5"
+  >
+    <div id="grid" class="grid grid-cols-2">
+      <div
+        id="sq1"
+        class="text-complimentryTextColor border-r-2 border-black bg- p-5"
+      >
+        <h2>{title}</h2>
+        <div id="flex" class="grid grid-cols-2">
+          <div class="">
+            <!-- <h3>I build websites for...</h3> -->
+            <ul id="included-pages">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+            </ul>
+          </div>
+
+          <div class="">
+            <h3>Bonus pages</h3>
+            <ul id="bonus-pages">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="sq2" class="bg-carribean text-parchment p-">
+        <img
+          src="https://images.pexels.com/photos/326514/pexels-photo-326514.jpeg?_gl=1*1t1jfmh*_ga*MTA5MDE3MzI2MS4xNzU4MjUwMDM4*_ga_8JE65Q40S6*czE3NzI3NTQ2ODkkbzM2JGcxJHQxNzcyNzU0NzAzJGo0NiRsMCRoMA.."
+          class=""
+        />
+      </div>
+    </div>
+  </section>
+</section>

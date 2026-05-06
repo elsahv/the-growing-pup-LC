@@ -1,6 +1,8 @@
 ---
 import ButtonProps from "./shared/ButtonProps.astro";
 import Dynamic from "./Dynamic.jsx";
+import Image from "astro/components/Image.astro";
+import TestImg from "../images/BuildAuthoritySelf.jpg";
 
 export interface Props {
   title: string;
@@ -16,7 +18,7 @@ const { title, paragraph1, paragraph2, paragraph3, paragraph4 } =
 
 <div id="" class="bg- py-5 my-5">
   <div id="PROBLEM-SOLVING-wrapper" class="py-5">
-    <div id="container" class="bg- 2xl:mx-0 md:mx-[50px] mx-5">
+    <div id="container" class="bg-">
       <div id="about-me-grid" class="grid md:grid-cols-2 grid-cols-1 gap-1">
         <div id="sq1" class="flex md:justify-end justify-center">
           <div
@@ -28,9 +30,9 @@ const { title, paragraph1, paragraph2, paragraph3, paragraph4 } =
         </div>
         <div id="sq2" class="bg- row-span-2">
           <!-- right img v -->
-          <img
+          <Image
             id="self-img"
-            src="https://images.pexels.com/photos/6238100/pexels-photo-6238100.jpeg?_gl=1*1xn3ay6*_ga*MTA5MDE3MzI2MS4xNzU4MjUwMDM4*_ga_8JE65Q40S6*czE3Nzc2NzM2MjQkbzU4JGcxJHQxNzc3NjczNjQ1JGozOSRsMCRoMA.."
+            src={TestImg}
             alt=""
             class="sq-styles bg- lg:p-5 p-2 2xl:w-[450px] my-2 sq-styles"
           />

@@ -1,14 +1,14 @@
 ---
 id: 3
 layout: ../../layouts/CreativeProjectLayout.astro
-creativeProjectTitle: "Morongo Basin Weirdness | The Running Quail"
-creativeProjectDesc: "an online page which works as a 'time-capsule' of some sort to capture Morongo Basins presence. "
+creativeProjectTitle: "The Running Quail "
+creativeProjectDesc: "  How LC helped this website "
 # wtbh will likely go towards eh
 
 creativeProjectMainImg:
   url: "https://images.pexels.com/photos/5251883/pexels-photo-5251883.jpeg?_gl=1*1avmgfo*_ga*MTA5MDE3MzI2MS4xNzU4MjUwMDM4*_ga_8JE65Q40S6*czE3Nzc1NzUwMjAkbzU0JGcxJHQxNzc3NTc1MDM2JGo0NCRsMCRoMA.."
   alt: "The full Astro logo."
-
+creativeTest: "UI design, design system, conversion optimisation"
 asidePhoto:
   url: "https://images.pexels.com/photos/8025981/pexels-photo-8025981.jpeg?_gl=1*1e9k0fb*_ga*MTA5MDE3MzI2MS4xNzU4MjUwMDM4*_ga_8JE65Q40S6*czE3Nzc1MTk4MjgkbzUzJGcwJHQxNzc3NTE5ODI4JGo2MCRsMCRoMA.."
   alt: "The mini Astro logo."
@@ -19,8 +19,8 @@ scopeOfWork: "clearly defines what work will be done on a project, how it will b
 callToAction: "https://therunningquail.com"
 
 coolorsImg:
-  url: "https://dl.dropboxusercontent.com/scl/fi/9zpyl1zdptbvpc3akl5rz/rq-test1.png?rlkey=yxno5hxnnr8ve1y0zgjgtdmia&st=abcb9fcd&dl=0"
-  alt: "coolors-rq-test1."
+  url: "https://dl.dropboxusercontent.com/scl/fi/9zpyl1zdptbvpc3akl5rz/rq- .png?rlkey=yxno5hxnnr8ve1y0zgjgtdmia&st=abcb9fcd&dl=0"
+  alt: "coolors-rq- ."
 
 websiteUrl: "https://elsahovey.com"
 githubUrl: "https://github.com/elsahv/-the-running-quail"

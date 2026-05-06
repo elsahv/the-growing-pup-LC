@@ -2,32 +2,25 @@
 import Image from "astro/components/Image.astro";
 import CenterPageBanner from "../../shared/CenterPageBanner.astro";
 
-import HowItWorks from "./HowItWorks.astro";
 import WhatsIncluded from "./WhatsIncluded.astro";
 import TestImg from "../../../images/aboutComputer.jpg";
 import TestImg2 from "../../../images/self2.jpg";
 import AboutLC from "../funnelBlock/AboutLC.astro";
-import TestCreative1 from "../../TestCreative1.jsx";
 ---
 
-<div id="AboutBlock" class="bg- border-y-2 border-test1">
-  <!-- <HowItWorks /> -->
-  <!-- TODO: TEMPLATES GALLERY HERE V -->
-  <TestCreative1 />
-
-  <!-- TODO: TEMPLATES GALLERY HERE ^ -->
+<div id="AboutBlock" class="bg- border-y-2 border-">
   <!-- <WhatsIncluded /> -->
 
   <div id="wrapper" class="bg- flex justify-center pt-5 mt-5">
-    <div id="container" class="mt-5 pt-5 w-3/4 max-w-7xl">
-      <AboutLC />
+    <div id="container" class="mt-5 pt-5 md:w-3/4 w-full sm:px-5 max-w-7xl">
+      <!-- <AboutLC /> -->
 
       <div id="grid" class="grid grid-cols-3 gap-5">
         <div id="sq1" class="bg- col-span-1">
           <Image
             src={TestImg2}
             alt=""
-            class="h- border-black border-r mt-5 sq-styles"
+            class="p- border-black border-r mt-5 sq-styles"
           />
         </div>
         <div id="sq2" class="bg- col-span-2">
@@ -109,11 +102,9 @@ import TestCreative1 from "../../TestCreative1.jsx";
                 <li>those who want a distinctive visual identity</li>
               </ul>
             </div>
-            <!-- TODO: ^^^ ^-->
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- TODO: NEW PICTURE GRID ^-->

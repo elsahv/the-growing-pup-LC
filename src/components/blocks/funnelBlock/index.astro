@@ -1,9 +1,13 @@
 ---
-import Hero from "./Hero.astro";
+import Marquee from "../../Marquee.astro";
+import HowItWorks from "../aboutBlock/HowItWorks.astro";
 import BuildAuthority from "./BuildAuthority.astro";
 ---
 
-<div id="FunnelBlock" class="bg-">
-  <Hero />
-  <BuildAuthority />
+<div id="FunnelBlock" class="mt-5 pt-5 flex justify-center">
+  <div id="container" class="pt-5 mt-5 bg-test w-full">
+    <BuildAuthority />
+    <Marquee />
+    <HowItWorks />
+  </div>
 </div>

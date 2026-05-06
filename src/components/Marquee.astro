@@ -1,0 +1,61 @@
+---
+// src/components/SkillMarquee.astro
+const items = ["WEB💙DEVELOPMENT", "copywriting", "CREATIVE", "CODE"];
+---
+
+<!-- ELABORATE ON WHAT I BUILD --V -->
+<section class="relative overflow-hidden mt-5 py-3">
+  <div
+    class="absolute inset-0 bg-[linear-gradient(#eee_1px,transparent_1px),linear-gradient(90deg,#eee_1px,transparent_1px)] bg-[size:48px_48px] opacity-70"
+  >
+  </div>
+
+  <div class="relative h-40">
+    <p class="text-4xl pb-5 mb-5 pl-5">I build for...</p>
+    <div
+      class="border border-black marquee-track absolute left-1/2 top-1/2 w-[140vw] -translate-x-1/2 -translate-y-1/2 -rotate-4 bg-websiteFocus py-6"
+    >
+      <div
+        class="marquee-content flex w-max items-center gap-10 whitespace-nowrap font-mono text-5xl font-black uppercase tracking-wide"
+      >
+        {
+          [...items, ...items, ...items, ...items].map((item) => (
+            <span class="lowercase flex items-center gap-10">
+              <span class="px-12 font-thin text-complimentryTextColor">
+                {item}
+              </span>
+            </span>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .marquee-track {
+    animation: driftDownLeft 130s linear infinite;
+  }
+
+  .marquee-content {
+    animation: scrollText 138s linear infinite;
+  }
+
+  @keyframes driftDownLeft {
+    from {
+      transform: translate(-40%, -60%) rotate(-2deg);
+    }
+    to {
+      transform: translate(-55%, -45%) rotate(-2deg);
+    }
+  }
+
+  @keyframes scrollText {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+</style>

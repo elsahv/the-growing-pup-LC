@@ -1,5 +1,3 @@
----
-// src/components/PopularArticles.astro
 
 const articles = [
   {
@@ -39,15 +37,20 @@ const articles = [
       "https://images.pexels.com/photos/5251883/pexels-photo-5251883.jpeg?_gl=1*1avmgfo*_ga*MTA5MDE3MzI2MS4xNzU4MjUwMDM4*_ga_8JE65Q40S6*czE3Nzc1NzUwMjAkbzU0JGcxJHQxNzc3NTc1MDM2JGo0NCRsMCRoMA..",
   },
 ];
-
+import { RiTailwindCssFill, RiReactjsFill } from "react-icons/ri";
+import { SiAstro } from "react-icons/si";
 const featureImage = "/images/popular-bg.jpg";
----
 
-<section class="bg-[#262626] px-6 py-10 text-complimentryTextColor sm:px-10">
+const CreateTempGallery = () => {
+  return (
+   <section
+  id="creative-templates"
+  class="bg-websiteFocus px-6 py-10 text-complimentryTextColor border-y-4 border-black"
+>
   <div
-    class="flex gap-8 overflow-x-auto pb-10 [scrollbar-color:#737373_#171717] [scrollbar-width:thin]"
+    class="flex 2xl:flex-row flex-col xl:gap-4 gap-y-2  overflow-x-auto pb-10 "     
   >
-    <!-- Featured black/image card -->
+    {/* <!-- Featured black/image card --> */}
     <article
       class="relative flex min-h-[360px] min-w-[260px] overflow-hidden rounded-xl p-1"
     >
@@ -62,32 +65,32 @@ const featureImage = "/images/popular-bg.jpg";
         <img
           src={featureImage}
           alt=""
-          class="absolute inset-0 h-full w-full object-cover"
+          class="absolute inset-0 h-full w-full object-cover"   
         />
 
         <div class="absolute inset-0 bg-black/75"></div>
 
         <div class="relative z-10">
           <h2 class="mb-8 text-4xl font-extrabold leading-tight">
-            Popular<br />this<br />month
+            endless<br />design<br />possibilities!
           </h2>
 
-          <p class="font-serif text-lg">Powered by</p>
+          <p class="font-serif text-lg">powered by</p>
 
-          <a href="#" class="mt-2 block font-serif text-lg text-cyan-400">
-            DigitalOcean
-          </a>
+          <div id="made-with"  class="mt-2 pt-1 text-2xl font-serif  text-cyan-400 flex">
+          <SiAstro /> <RiReactjsFill />  <RiTailwindCssFill />
+          </div>
         </div>
       </div>
     </article>
 
-    <!-- Article cards -->
+    {/* <!-- Article cards --> */}
     {
       articles.map((article) => (
         <a href="/">
           <article
             id="sq"
-            class="opacity-70 hover:opacity-100 relative min-h-[300px] min-w-[260px] overflow-hidden rounded-2xl shadow-2xl transition duration-300 hover:-translate-y-2"
+            class="border-2 border-r-4 border-black opacity-70 hover:opacity-100 relative  overflow-hidden rounded-2xl shadow-2xl transition duration-300 hover:-translate-x-2"
           >
             <img
               src={article.image}
@@ -97,7 +100,7 @@ const featureImage = "/images/popular-bg.jpg";
 
             <div class="absolute inset-0 bg-gradient-to-b from-black/35 via-black/65 to-black/90" />
 
-            <div class="relative z-10 flex min-h-[300px] flex-col p-7">
+            <div class="relative z-10 flex min-h-[300px] flex-col 2xl:p-7 p-1">
               <p class="mb-2 font-serif text-lg font-bold">
                 Article
                 <span class="font-normal text-zinc-400">
@@ -106,7 +109,7 @@ const featureImage = "/images/popular-bg.jpg";
                 </span>
               </p>
 
-              <h3 class="mb-5 text-2xl font-extrabold leading-tight">
+              <h3 class="block mb-5 2xl:text-2xl text-xl font-extrabold leading-tight">
                 {article.title}
               </h3>
 
@@ -137,3 +140,8 @@ const featureImage = "/images/popular-bg.jpg";
     }
   </div>
 </section>
+
+  )
+}
+
+export default CreateTempGallery

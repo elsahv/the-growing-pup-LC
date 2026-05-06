@@ -39,19 +39,19 @@ const { frontmatter } = Astro.props;
             id="mini-img-screenshot"
             src={frontmatter.asidePhoto.url}
             alt={frontmatter.asidePhoto.alt}
-            class="h- border-black border-r mt-5 sq-styles bg-test1"
+            class="h- border-black border-r mt-5 sq-styles bg-"
           />
         </div>
         <div id="sq2" class="bg- col-span-2">
           <div class="text-websiteFocus mb-5 p-5 flex flex-col gap-y-5">
             <h2 id="about-title" class="text-4xl font-semibold">About</h2>
-            <p id="about-content1" class="bg-test1">
+            <p id="about-content1" class="bg-">
               where the signature style meets real-world client strategy.{
                 frontmatter.aboutProject
               }
             </p>
             <h2 class="text-4xl font-semibold">Scope of Work</h2>
-            <p id="about-content2" class="bg-test1">
+            <p id="about-content2" class="bg-">
               {frontmatter.scopeOfWork}
             </p>
             <!-- TODO: CHANGE TO SMALL GALLERY IMG COMP -->
@@ -60,7 +60,7 @@ const { frontmatter } = Astro.props;
               id="coolors-img"
               src={frontmatter.coolorsImg.url}
               alt={frontmatter.coolorsImg.alt}
-              class="sq-styles bg-test2"
+              class="sq-styles bg-"
             />
 
             <br />

@@ -41,7 +41,7 @@ const ContactForm = () => {
             />
             <input
               placeholder="enter password"
-              className="rounded-lg border border-black bg-teal md:w-2/3 w-1/2 h-10 pl-2 hover:border-test2"
+              className="rounded-lg border border-black bg-websiteFocus md:w-2/3 w-1/2 h-10 pl-2 hover:border- "
             />
             <div id="btns-wrapper " className="">
               <h3 className="py-3 text-xl">I'm looking for...</h3>
@@ -53,7 +53,7 @@ const ContactForm = () => {
                 {items.map((item) => (
                   <button
                     id={item.btn}
-                    className="sq-styles opacity-80 hover:opacity-100 hover:bg-test2 text-center"
+                    className="sq-styles opacity-80 hover:opacity-100 hover:bg-  text-center"
                   >
                     {item.btn}
                   </button>
